@@ -1,0 +1,12 @@
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.dll
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.xml
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
+C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
