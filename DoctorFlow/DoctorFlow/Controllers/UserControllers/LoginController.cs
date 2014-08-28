@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DoctorFlow.Models;
+using DoctorFlow.DataLogic;
 
 namespace DoctorFlow.Controllers.UserControllers
 {
@@ -22,18 +24,16 @@ namespace DoctorFlow.Controllers.UserControllers
 
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(UserLoginModel loginModel)
         {
-            try
-            {
-                // TODO: Add insert logic here
+            DoctorFlow.DataLogic.UserAccount _userAccount=new UserAccount();
 
-                return RedirectToAction("Index");
-            }
-            catch
+            if (_userAccount.Login(loginModel.EmailOrUserName, loginModel.Password))
             {
-                return View();
+                return RedirectToAction("Create", "Login"); 
             }
+
+            return RedirectToAction("Index","Login");
         }
 
        

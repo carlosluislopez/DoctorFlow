@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,13 @@ namespace DoctorFlow.DataLogic
     {
         public bool CreateUser(string UserName, string Password, string Name, string LastName, string Email)
         {
+            using (var db=new DoctorFlowContext())
+            {
+                var newUser = new User { UserName = UserName,Password = Password,Name = Name,Email = Email,LastName = LastName, RegisterDate = Convert.ToDateTime("12/2/2014"),Status = true};
+                db.Users.Add(newUser);
+                db.SaveChanges();
+                return true;
+            }
             return false;
         }
 

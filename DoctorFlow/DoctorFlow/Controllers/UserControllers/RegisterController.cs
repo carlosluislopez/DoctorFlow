@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DoctorFlow.Models;
+using DoctorFlow.DataLogic;
 
 namespace DoctorFlow.Controllers.UserControllers
 {
     public class RegisterController : Controller
     {
-        //
-        // GET: /Register/
+        
         public ActionResult Index()
         {
             return View();
@@ -23,18 +24,16 @@ namespace DoctorFlow.Controllers.UserControllers
 
       
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [AllowAnonymous]
+        public ActionResult Create(UserRegisterModel registerModel)
         {
-            try
-            {
-                // TODO: Add insert logic here
+            
+         DoctorFlow.DataLogic.UserAccount _userAccount=new UserAccount();
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            _userAccount.CreateUser(registerModel.UserName, registerModel.Password, registerModel.Name,
+                registerModel.LastName, registerModel.Email);
+            return RedirectToAction("Create", "Login");
+
         }
 
         

@@ -30,7 +30,6 @@ C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\b
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.xml
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csprojResolveAssemblyReference.cache
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
