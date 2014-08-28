@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Windows.Forms;
 using DoctorFlow.Models;
 using DoctorFlow.DataLogic;
 
@@ -27,6 +28,7 @@ namespace DoctorFlow.Controllers.UserControllers
         [AllowAnonymous]
         public ActionResult Create(UserRegisterModel registerModel)
         {
+          
             
          DoctorFlow.DataLogic.UserAccount _userAccount=new UserAccount();
 
