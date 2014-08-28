@@ -23,3 +23,16 @@ C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\D
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csprojResolveAssemblyReference.cache
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.dll
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.xml
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csprojResolveAssemblyReference.cache
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
+C:\Users\AngelaJDM\Desktop\FuturoBebe\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb

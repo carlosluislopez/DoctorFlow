@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+        </div>
+        <div class="col-md-12 col-md-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Area de Registro</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="avatar"></div>
+                    <div class="row">
+                        <tr>
+                            <p align="center">
+                                <input type="text" placeholder="Nombre de usuario" class="form-control">
+                                <br />
+                                <input type="text" placeholder="Contraseña" class="form-control">
+                            </p>
+                        </tr>
+                        <p align="center">
+                            <a class="btn btn-primary" href="@Url.Action("Index","Login")">Ingresar &raquo;</a>
+                            <a class="btn btn-primary" href="@Url.Action("Index","Home")">Página Principal &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
