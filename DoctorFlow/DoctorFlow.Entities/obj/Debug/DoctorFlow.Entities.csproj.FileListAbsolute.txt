@@ -10,3 +10,16 @@ C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Enti
 C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
 C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
 C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.xml
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csprojResolveAssemblyReference.cache

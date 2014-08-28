@@ -10,3 +10,15 @@ C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Test
 C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Test\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Test\obj\Debug\DoctorFlow.Test.exe
 C:\Users\clopez\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow.Test\obj\Debug\DoctorFlow.Test.pdb
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\DoctorFlow.Test.exe.config
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\DoctorFlow.Test.exe
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\DoctorFlow.Test.pdb
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\EntityFramework.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\EntityFramework.xml
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\obj\Debug\DoctorFlow.Test.csprojResolveAssemblyReference.cache
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\obj\Debug\DoctorFlow.Test.exe
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.Test\obj\Debug\DoctorFlow.Test.pdb

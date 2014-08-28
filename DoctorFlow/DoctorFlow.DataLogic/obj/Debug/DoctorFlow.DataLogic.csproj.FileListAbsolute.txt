@@ -1,0 +1,10 @@
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll.config
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.pdb
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.xml
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb
+C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
