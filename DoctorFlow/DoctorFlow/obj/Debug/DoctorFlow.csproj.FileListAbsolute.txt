@@ -62,3 +62,37 @@ C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\D
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.pdb
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.dll
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll.config
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Antlr3.Runtime.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.DataLogic.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.SqlServer.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Newtonsoft.Json.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Helpers.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Mvc.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Optimization.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Razor.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Razor.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\WebGrease.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.DataLogic.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.SqlServer.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Helpers.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Mvc.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Optimization.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Razor.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Razor.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Newtonsoft.Json.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Antlr3.Runtime.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.csprojResolveAssemblyReference.cache
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.pdb

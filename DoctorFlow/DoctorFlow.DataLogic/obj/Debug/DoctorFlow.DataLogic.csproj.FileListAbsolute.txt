@@ -10,3 +10,15 @@ C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\D
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.dll
 C:\Users\carlo_000\Documents\Visual Studio 2013\Projects\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll.config
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
+C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb
