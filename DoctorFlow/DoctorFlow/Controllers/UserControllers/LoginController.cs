@@ -30,7 +30,7 @@ namespace DoctorFlow.Controllers.UserControllers
 
             if (_userAccount.Login(loginModel.EmailOrUserName, loginModel.Password))
             {
-                return RedirectToAction("Create", "Login"); 
+                return RedirectToAction("Index", "Home"); 
             }
 
             return RedirectToAction("Index","Login");
