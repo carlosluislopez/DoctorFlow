@@ -20,7 +20,6 @@ namespace DoctorFlow.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-
         [Required]
         [StringLength(100, ErrorMessage = "the password should be at least 8 characters in length {2}.", MinimumLength = 6)]
         [DataType(DataType.Password)]

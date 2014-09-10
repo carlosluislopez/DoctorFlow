@@ -131,7 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PasswordRecoveryController.cs" />
+    <Compile Include="Controllers\UserControllers\PasswordRecoveryController.cs" />
     <Compile Include="Controllers\UserControllers\LoginController.cs" />
     <Compile Include="Controllers\UserControllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -139,6 +139,7 @@
     </Compile>
     <Compile Include="Models\UserModels\UserPasswordRecoveryModel.cs" />
     <Compile Include="Models\UserModels\UserLoginModel.cs" />
+    <Compile Include="Models\UserModels\UserPasswordResetModel.cs" />
     <Compile Include="Models\UserModels\UserRegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -176,6 +177,9 @@
     <Content Include="Views\Register\Create.cshtml" />
     <Content Include="Views\Login\Create.cshtml" />
     <Content Include="Views\PasswordRecovery\Index.cshtml" />
+    <Content Include="Views\PasswordRecovery\Error.cshtml" />
+    <Content Include="Views\PasswordRecovery\Restore.cshtml" />
+    <Content Include="Views\PasswordRecovery\RestoreError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

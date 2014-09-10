@@ -27,17 +27,41 @@ namespace DoctorFlow.DataLogic
             return false;
         }
 
-        public bool InitiatePasswordRecovery(string email,string tempPassword)
+        public bool ResetPassword(string email, string newPassword, string passKey)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                var today = DateTime.Now;
+                var userQueryable = (from u in db.Users
+                                     where Equals(u.Email, email) && Equals(u.TempPassword,passKey)
+                                     select u);
+                if (!userQueryable.Any())
+                    return false;
+                var user = userQueryable.First();
+                if (user.PasswordFlag.AddDays(1) < today)
+                    return false;
+                user.TempPassword = null;
+                user.PasswordFlag = today;
+                user.Password = newPassword;
+                db.SaveChanges();
+            }
+            return true;
+        }
+        public bool InitiatePasswordRecovery(string email,string passKey)
         {
             using (var db=new DoctorFlowContext())
             {
-                var user = (from u in db.Users
+                var today = DateTime.Now;
+                var userQueryable = (from u in db.Users
                     where Equals(u.Email, email)
-                    select u).First();
-                if (user == null) return false;
-                if (user.PasswordFlag) return false;
-                user.TempPassword = tempPassword;
-                user.PasswordFlag = true;
+                    select u);
+                if (!userQueryable.Any())
+                    return false;
+                var user = userQueryable.First();
+                if (user.PasswordFlag.AddDays(1) > today) 
+                    return false;
+                user.TempPassword = passKey;
+                user.PasswordFlag = today;
                 db.SaveChanges();
             }
             return true;
@@ -46,11 +70,13 @@ namespace DoctorFlow.DataLogic
         {
             using (var db = new DoctorFlowContext())
             {
-                var usuarios = from u in db.Users
-                               where Equals(u.Password, password) && (Equals(u.Email, userNameEmail) || Equals(u.UserName, userNameEmail))
-                               select u;
+                var users = from user in db.Users
+                               where Equals(user.Password, password) 
+                               && (Equals(user.Email, userNameEmail) || Equals(user.UserName, userNameEmail)) 
+                               && user.Status
+                               select user;
 
-                if (usuarios.Any())
+                if (users.Any())
                     return true;
 
             }
