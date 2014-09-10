@@ -42,6 +42,7 @@ video {
   display: inline-block;
 }
 
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -59,6 +60,7 @@ html {
 
 body {
   margin: 0;
+    margin-top: auto;
 }
 
 a:focus {
@@ -311,7 +313,7 @@ html {
 }
 
 body {
-  font-family:"Times New Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -4026,7 +4028,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   z-index: 1000;
-  min-height: 50px;
+  min-height: 25px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4502,8 +4504,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #32cd32;
-  border-color: #468847;
+  background-color: #005CE6;
+  border-color: #005CE6;
 }
 
 .navbar-inverse .navbar-brand {
@@ -4934,6 +4936,10 @@ a.list-group-item.active > .badge,
   margin-left: 3px;
 }
 
+  .customBackground {
+  }
+
+
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
@@ -4942,7 +4948,6 @@ a.list-group-item.active > .badge,
   line-height: 2.1428571435;
   color: #ffffff;
   text-shadow: -2px 2px 3px #ff0000;
-  background:url(../Content/bgdrflow.jpg) no-repeat 0;
 }
 
 .jumbotron h1 {
@@ -6821,4 +6826,5 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+
 }
