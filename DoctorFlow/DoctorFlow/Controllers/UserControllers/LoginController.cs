@@ -27,13 +27,13 @@ namespace DoctorFlow.Controllers.UserControllers
         public ActionResult Create(UserLoginModel loginModel)
         {
             var userAccount=new UserRepository();
-
-            if (userAccount.Login(loginModel.EmailOrUserName, loginModel.Password))
+            var userId = userAccount.Login(loginModel.EmailOrUserName, loginModel.Password);
+            if (userId == -1)
             {
-                return RedirectToAction("Index", "Home"); 
+                return RedirectToAction("Index", "Login"); 
             }
-
-            return RedirectToAction("Index","Login");
+            return RedirectToAction("Details", "Profile", userId); 
+            
         }
 
        

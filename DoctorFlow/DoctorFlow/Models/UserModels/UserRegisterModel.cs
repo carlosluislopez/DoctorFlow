@@ -8,6 +8,7 @@ namespace DoctorFlow.Models
 {
     public class UserRegisterModel
     {
+
         [Required]
         [Display(Name = "UserName")]
         public string UserName { get; set; }

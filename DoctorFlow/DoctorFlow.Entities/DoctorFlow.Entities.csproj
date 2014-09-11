@@ -63,6 +63,14 @@
     <Compile Include="Migrations\201409100700589_FlaDatetime.Designer.cs">
       <DependentUpon>201409100700589_FlaDatetime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201409111027381_AddUserFields.cs" />
+    <Compile Include="Migrations\201409111027381_AddUserFields.Designer.cs">
+      <DependentUpon>201409111027381_AddUserFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409111824201_AddUserPhotoField.cs" />
+    <Compile Include="Migrations\201409111824201_AddUserPhotoField.Designer.cs">
+      <DependentUpon>201409111824201_AddUserPhotoField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\User.cs" />
@@ -84,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201409100700589_FlaDatetime.resx">
       <DependentUpon>201409100700589_FlaDatetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409111027381_AddUserFields.resx">
+      <DependentUpon>201409111027381_AddUserFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409111824201_AddUserPhotoField.resx">
+      <DependentUpon>201409111824201_AddUserPhotoField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
