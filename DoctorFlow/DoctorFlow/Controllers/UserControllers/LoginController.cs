@@ -26,9 +26,9 @@ namespace DoctorFlow.Controllers.UserControllers
         [HttpPost]
         public ActionResult Create(UserLoginModel loginModel)
         {
-            DoctorFlow.DataLogic.UserAccount _userAccount=new UserAccount();
+            var userAccount=new UserRepository();
 
-            if (_userAccount.Login(loginModel.EmailOrUserName, loginModel.Password))
+            if (userAccount.Login(loginModel.EmailOrUserName, loginModel.Password))
             {
                 return RedirectToAction("Index", "Home"); 
             }

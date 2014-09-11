@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 style="color: red ;font-family: helvetica">Error</h3>
+<p>@ViewBag.Message</p>
+
+@if (ViewBag.Errors != null)
+{
+    foreach (string error in ViewBag.Errors)
+    {
+        @Html.Label(error)
+        <br />
+    }
+}

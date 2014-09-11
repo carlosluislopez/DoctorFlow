@@ -55,6 +55,14 @@
     <Compile Include="Migrations\201408271753101_RemoveIDRol.Designer.cs">
       <DependentUpon>201408271753101_RemoveIDRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201409091037580_Test.cs" />
+    <Compile Include="Migrations\201409091037580_Test.Designer.cs">
+      <DependentUpon>201409091037580_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409100700589_FlaDatetime.cs" />
+    <Compile Include="Migrations\201409100700589_FlaDatetime.Designer.cs">
+      <DependentUpon>201409100700589_FlaDatetime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\User.cs" />
@@ -70,6 +78,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408271753101_RemoveIDRol.resx">
       <DependentUpon>201408271753101_RemoveIDRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409091037580_Test.resx">
+      <DependentUpon>201409091037580_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409100700589_FlaDatetime.resx">
+      <DependentUpon>201409100700589_FlaDatetime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

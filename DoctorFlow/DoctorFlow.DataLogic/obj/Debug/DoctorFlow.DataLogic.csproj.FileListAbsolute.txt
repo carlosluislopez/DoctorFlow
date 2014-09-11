@@ -22,3 +22,18 @@ C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
 C:\Users\kingdomkaz\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll.config
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.pdb
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.dll
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.dll
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.xml
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.xml
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb
