@@ -49,3 +49,4 @@ C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\
 C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
 C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
 C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Test.resources
+C:\Users\Moriya Shrine\Desktop\DoctorFlow-Kehimer\DoctorFlow-Kehimer\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.FlaDatetime.resources

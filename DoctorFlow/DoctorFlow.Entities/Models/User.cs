@@ -16,7 +16,7 @@ namespace DoctorFlow.Entities.Models
         public string Email { set; get; }
         public DateTime RegisterDate { set; get; }
         public bool Status { set; get; }
-        public bool PasswordFlag { set; get; }
+        public DateTime PasswordFlag { set; get; }
         public string TempPassword { get; set; }
     }
 }
