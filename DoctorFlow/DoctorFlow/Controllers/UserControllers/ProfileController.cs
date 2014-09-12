@@ -18,23 +18,23 @@ namespace DoctorFlow.Controllers.UserControllers
         // GET: /Profile/
         public ActionResult Index()
         {
+
             return View();
         }
 
         //
         // GET: /Profile/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(User user)
         {
-            return View();
+            
+            return View(user);
         }
-
         
-
         //
         // GET: /Profile/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(User user)
         {
-            return View();
+            return View(user);
         }
 
         //
@@ -51,7 +51,7 @@ namespace DoctorFlow.Controllers.UserControllers
                 newUser.RegisterDate = DateTime.Now;
                 newUser.PasswordFlag = DateTime.Now.AddDays(-1);
                 _userRepositry.CreateUser(newUser);
-                return RedirectToAction("Details", "Profile");
+                return RedirectToAction("Edit", "Profile");
             }
             catch
             {

@@ -20,7 +20,7 @@ namespace DoctorFlow.DataLogic
         {
             using (var db=new DoctorFlowContext())
             {
-                db.Users.Add(newUser);
+                db.Users.Attach(newUser);
                 db.SaveChanges();
                 return true;
             }
@@ -66,7 +66,7 @@ namespace DoctorFlow.DataLogic
             }
             return true;
         }
-        public int Login(string userNameEmail, string password)
+        public User Login(string userNameEmail, string password)
         {
             using (var db = new DoctorFlowContext())
             {
@@ -79,11 +79,11 @@ namespace DoctorFlow.DataLogic
                                 select user;
 
                     if (users.Any())
-                        return users.First().Id;
+                        return users.First();
                 }
                 catch (Exception ex) { }
             }
-            return -1;
+            return null;
         }
 
         public bool EditUser(User EditUser)

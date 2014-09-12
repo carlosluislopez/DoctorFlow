@@ -52,6 +52,7 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
     </Reference>
@@ -138,6 +139,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserModels\UserEditProfileModel.cs" />
     <Compile Include="Models\UserModels\UserPasswordRecoveryModel.cs" />
     <Compile Include="Models\UserModels\UserLoginModel.cs" />
     <Compile Include="Models\UserModels\UserPasswordResetModel.cs" />
@@ -177,12 +179,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Register\Create.cshtml" />
-    <Content Include="Views\Login\Create.cshtml" />
     <Content Include="Views\PasswordRecovery\Index.cshtml" />
     <Content Include="Views\PasswordRecovery\Error.cshtml" />
     <Content Include="Views\PasswordRecovery\Restore.cshtml" />
     <Content Include="Views\PasswordRecovery\RestoreError.cshtml" />
     <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Login\Create.cshtml" />
+    <Content Include="Views\Profile\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

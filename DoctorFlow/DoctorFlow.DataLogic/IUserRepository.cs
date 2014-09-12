@@ -6,8 +6,8 @@ namespace DoctorFlow.DataLogic
     {
         bool CreateUser(User newUser);
         bool InitiatePasswordRecovery(string email, string passKey);
-        int Login(string userNameEmail, string password);
+        User Login(string userNameEmail, string password);
         bool ResetPassword(string email, string newPassword, string passKey);
-        bool EditUser(User EditUser);
+        User EditUser(User editUser);
     }
 }
