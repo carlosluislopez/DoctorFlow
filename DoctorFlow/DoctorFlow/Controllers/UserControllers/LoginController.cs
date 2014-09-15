@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
+using System.Windows.Forms;
 using DoctorFlow.Models;
 using DoctorFlow.DataLogic;
+using Microsoft.JScript;
 
 namespace DoctorFlow.Controllers.UserControllers
 {
@@ -27,13 +31,24 @@ namespace DoctorFlow.Controllers.UserControllers
         public ActionResult Create(UserLoginModel loginModel)
         {
             var userAccount=new UserRepository();
-
-            if (userAccount.Login(loginModel.EmailOrUserName, loginModel.Password))
+            var user = userAccount.Login(loginModel.EmailOrUserName, loginModel.Password);
+            
+            
+            if (user==null)
             {
-                return RedirectToAction("Index", "Home"); 
+                return RedirectToAction("Index", "Login"); 
             }
+            Session.Add("USERNAME", user.Name);
+            Session.Add("USERID", user.Id);
+            return RedirectToAction("Details", "Profile",user);
+        }
 
-            return RedirectToAction("Index","Login");
+
+        public ActionResult Logout()
+        {
+            Session["USERNAME"] = string.Empty;
+            Session.Add("USERID", -1);
+            return RedirectToAction("Index", "Login"); 
         }
 
        

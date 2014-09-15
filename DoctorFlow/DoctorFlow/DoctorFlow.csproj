@@ -52,6 +52,7 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
     </Reference>
@@ -133,15 +134,21 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserControllers\PasswordRecoveryController.cs" />
     <Compile Include="Controllers\UserControllers\LoginController.cs" />
+    <Compile Include="Controllers\UserControllers\ProfileController.cs" />
     <Compile Include="Controllers\UserControllers\RegisterController.cs" />
+    <Compile Include="Controllers\UserControllers\RegisterDoctorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserModels\DoctorRegisterModel.cs" />
+    <Compile Include="Models\UserModels\UserEditProfileModel.cs" />
     <Compile Include="Models\UserModels\UserPasswordRecoveryModel.cs" />
     <Compile Include="Models\UserModels\UserLoginModel.cs" />
     <Compile Include="Models\UserModels\UserPasswordResetModel.cs" />
+    <Compile Include="Models\UserModels\UserProfileModel.cs" />
     <Compile Include="Models\UserModels\UserRegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -175,11 +182,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Register\Create.cshtml" />
-    <Content Include="Views\Login\Create.cshtml" />
     <Content Include="Views\PasswordRecovery\Index.cshtml" />
     <Content Include="Views\PasswordRecovery\Error.cshtml" />
     <Content Include="Views\PasswordRecovery\Restore.cshtml" />
     <Content Include="Views\PasswordRecovery\RestoreError.cshtml" />
+    <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Create.cshtml" />
+    <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\RegisterDoctor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

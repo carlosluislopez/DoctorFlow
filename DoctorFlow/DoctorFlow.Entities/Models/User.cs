@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace DoctorFlow.Entities.Models
 {
@@ -18,5 +19,14 @@ namespace DoctorFlow.Entities.Models
         public bool Status { set; get; }
         public DateTime PasswordFlag { set; get; }
         public string TempPassword { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string SocialSecurityNumber { get; set; }
+        public string Phone { get; set; }
+        public string MaritalStatus { get; set; }
+        public int Height { get; set; }
+        public string BloodType { get; set; }
+        public string Allergy { get; set; }
+        public string Address { get; set; }
+        public byte[] Photo { get; set; }
     }
 }

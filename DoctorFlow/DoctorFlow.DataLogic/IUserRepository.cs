@@ -5,8 +5,14 @@ namespace DoctorFlow.DataLogic
     public interface IUserRepository
     {
         bool CreateUser(User newUser);
+        bool CreateDoctor(User newUset, Doctor newDoctor);
         bool InitiatePasswordRecovery(string email, string passKey);
-        bool Login(string userNameEmail, string password);
+        User Login(string userNameEmail, string password);
         bool ResetPassword(string email, string newPassword, string passKey);
+        bool EditUser(User EditUser);
+        string UserName(int UserId);
+        User EditUser2(User editUser);
+
+        User getUser(int idUser);
     }
 }
