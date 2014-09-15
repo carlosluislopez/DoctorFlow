@@ -10,8 +10,12 @@ namespace DoctorFlow.Controllers
     {
         public ActionResult Index()
         {
-            Session.Add("USERNAME", string.Empty);
-            Session.Add("USERID", -1);
+
+            if (Session["USERID"] == null || Session["USERID"].ToString() == "")
+            {
+                Session.Add("USERNAME", string.Empty);
+                Session.Add("USERID", -1);
+            }
             return View();
         }
 

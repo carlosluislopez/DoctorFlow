@@ -34,19 +34,23 @@ namespace DoctorFlow.Controllers.UserControllers
         [AllowAnonymous]
         public ActionResult Index(DoctorRegisterModel registerModel)
         {
-            Mapper.CreateMap<User, DoctorRegisterModel>().ReverseMap();
-            Mapper.CreateMap<Doctor, DoctorRegisterModel>().ReverseMap();
-            var newUser = Mapper.Map<DoctorRegisterModel, User>(registerModel);
-            var newDoctor = Mapper.Map<DoctorRegisterModel, Doctor>(registerModel);
-            newUser.Status = true;
-            newUser.RegisterDate = DateTime.Now;
-            newUser.PasswordFlag = DateTime.Now.AddDays(-1);
-            newUser.BirthDate = DateTime.Now;
-            newDoctor.MyUserData = newUser;
-            
-            
-            _userRepositry.CreateDoctor(newUser,newDoctor);
-            return RedirectToAction("Create", "Login");
+            if (ModelState.IsValid)
+            {
+                Mapper.CreateMap<User, DoctorRegisterModel>().ReverseMap();
+                Mapper.CreateMap<Doctor, DoctorRegisterModel>().ReverseMap();
+                var newUser = Mapper.Map<DoctorRegisterModel, User>(registerModel);
+                var newDoctor = Mapper.Map<DoctorRegisterModel, Doctor>(registerModel);
+                newUser.Status = true;
+                newUser.RegisterDate = DateTime.Now;
+                newUser.PasswordFlag = DateTime.Now.AddDays(-1);
+                newUser.BirthDate = DateTime.Now;
+                newDoctor.MyUserData = newUser;
+
+
+                _userRepositry.CreateDoctor(newUser, newDoctor);
+                return RedirectToAction("Create", "Login");
+            }
+            return View(registerModel);
         }
     }
 }

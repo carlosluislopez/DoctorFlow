@@ -189,8 +189,8 @@
     <Content Include="Views\Profile\Details.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Create.cshtml" />
-    <Content Include="Views\Profile\Edit.cshtml" />
     <Content Include="Views\RegisterDoctor\Index.cshtml" />
+    <Content Include="Views\Profile\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

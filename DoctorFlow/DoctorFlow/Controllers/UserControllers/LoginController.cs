@@ -14,43 +14,38 @@ namespace DoctorFlow.Controllers.UserControllers
 {
     public class LoginController : Controller
     {
-        
         public ActionResult Index()
         {
             return View();
         }
-
-        
         public ActionResult Create()
         {
             return View();
         }
-
-
         [HttpPost]
         public ActionResult Create(UserLoginModel loginModel)
         {
-            var userAccount=new UserRepository();
-            var user = userAccount.Login(loginModel.EmailOrUserName, loginModel.Password);
-            
-            
-            if (user==null)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Login"); 
+                var userAccount = new UserRepository();
+                var user = userAccount.Login(loginModel.EmailOrUserName, loginModel.Password);
+
+
+                if (user == null)
+                {
+                    return View(loginModel);
+                }
+                Session.Add("USERNAME", user.Name);
+                Session.Add("USERID", user.Id);
+                return RedirectToAction("Details", "Profile");
             }
-            Session.Add("USERNAME", user.Name);
-            Session.Add("USERID", user.Id);
-            return RedirectToAction("Details", "Profile",user);
+            return View(loginModel);
         }
-
-
         public ActionResult Logout()
         {
             Session["USERNAME"] = string.Empty;
             Session.Add("USERID", -1);
-            return RedirectToAction("Index", "Login"); 
+            return RedirectToAction("Index", "Home"); 
         }
-
-       
     }
 }

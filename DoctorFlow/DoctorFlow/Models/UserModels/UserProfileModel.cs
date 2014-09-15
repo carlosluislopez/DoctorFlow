@@ -9,6 +9,10 @@ namespace DoctorFlow.Models
     public class UserProfileModel
     {
         [Required]
+        [Display(Name="Id")]
+        public int Id { get; set; }
+
+        [Required]
         [Display(Name = "Nombre de Usuario")]
         public string UserName { get; set; }
 
@@ -52,6 +56,8 @@ namespace DoctorFlow.Models
         public string Address { get; set; }
         
         [DataType(DataType.Upload)]
+        public HttpPostedFileBase UpladPhoto { get; set; }
+
         public byte[] Photo { get; set; }
     }
 }
