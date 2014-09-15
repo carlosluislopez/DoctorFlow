@@ -103,7 +103,7 @@ namespace DoctorFlow.DataLogic
             using (var db = new DoctorFlowContext())
             {
                 var userQueryable = (from u in db.Users
-                                     where Equals(u.Id, EditUser.Id)
+                                     where u.Id == EditUser.Id
                                      select u
                                     );
                 

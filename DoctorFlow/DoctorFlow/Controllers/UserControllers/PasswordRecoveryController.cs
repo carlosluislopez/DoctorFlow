@@ -36,49 +36,57 @@ namespace DoctorFlow.Controllers.UserControllers
         [AllowAnonymous]
         public ActionResult Index(UserPasswordRecoveryModel userPasswordRecoveryModel)
         {
-            var email = userPasswordRecoveryModel.Email;
-            const int passwordLength = 8;
-            const int numberOfNonAlphanumericCharacters = 2;
-            var generatePassword = Membership.GeneratePassword(passwordLength, numberOfNonAlphanumericCharacters);
-            if (!_userRepository.InitiatePasswordRecovery(email, generatePassword))
+            if (ModelState.IsValid)
             {
-                
-                return View("Error");
-            }
-            string temporalDomain = "http://localhost:1744";
-            string link = temporalDomain + "/PasswordRecovery/Restore";//TODO
-            string message = string.Format("Visite el siguiente enlace: {0} para recuperar su contraseña y " +
-                                           "utilice esta clave para hacer el cambio:\n {1} \nSi usted no pidio " +
-                                           "esto por favor ignore este correo.", link,generatePassword);
-            SendSimpleMessage(userPasswordRecoveryModel.Email, message);
+                var email = userPasswordRecoveryModel.Email;
+                const int passwordLength = 8;
+                const int numberOfNonAlphanumericCharacters = 2;
+                var generatePassword = Membership.GeneratePassword(passwordLength, numberOfNonAlphanumericCharacters);
+                if (!_userRepository.InitiatePasswordRecovery(email, generatePassword))
+                {
 
-            return RedirectToAction("Create", "Login");
+                    return View("Error");
+                }
+                string temporalDomain = "http://localhost:1744";
+                string link = temporalDomain + "/PasswordRecovery/Restore";//TODO
+                string message = string.Format("Visite el siguiente enlace: {0} para recuperar su contraseña y " +
+                                               "utilice esta clave para hacer el cambio:\n {1} \nSi usted no pidio " +
+                                               "esto por favor ignore este correo.", link, generatePassword);
+                SendSimpleMessage(userPasswordRecoveryModel.Email, message);
+
+                return RedirectToAction("Create", "Login");
+            }
+            return View(userPasswordRecoveryModel);
         }
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Restore(UserPasswordResetModel userPasswordResetModel)
         {
-            var email = userPasswordResetModel.Email;
-            var newPassword = userPasswordResetModel.NewPassword;
-            var passkey = userPasswordResetModel.PassKey;
-            if (newPassword != userPasswordResetModel.ConfirmNewPassword)
+            if (ModelState.IsValid)
             {
-                ViewBag.Message =
-                    "•No hay conincidencia entre el campon de Contraseña y el campo de Confirmación de contraseña";
-                return View("RestoreError");
-            }
-            if (!_userRepository.ResetPassword(email, newPassword, passkey))
-            {
-                ViewBag.Errors = new[]
+                var email = userPasswordResetModel.Email;
+                var newPassword = userPasswordResetModel.NewPassword;
+                var passkey = userPasswordResetModel.PassKey;
+                if (newPassword != userPasswordResetModel.ConfirmNewPassword)
+                {
+                    ViewBag.Message =
+                        "•No hay conincidencia entre el campon de Contraseña y el campo de Confirmación de contraseña";
+                    return View("RestoreError");
+                }
+                if (!_userRepository.ResetPassword(email, newPassword, passkey))
+                {
+                    ViewBag.Errors = new[]
                 {
                     "Ha ocurrido un error al intentar restaurar su contraseña, esto puede ocurrir debido a varios factores:",
                     "•El correo que ingresó no existe en nuestro servidor",
                     "•La restauración solicitada ya expiró:",
                     "Vuelva a iniciar el proceso de restauración."
                 };
-                return View("RestoreError");
+                    return View("RestoreError");
+                }
+                return RedirectToAction("Create", "Login");
             }
-            return RedirectToAction("Create", "Login");
+            return View(userPasswordResetModel);
         }
         public static IRestResponse SendSimpleMessage(string email, string message)
         {

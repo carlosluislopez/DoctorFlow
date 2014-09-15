@@ -8,6 +8,8 @@ using AutoMapper;
 using DoctorFlow.Entities.Models;
 using DoctorFlow.Models;
 using DoctorFlow.DataLogic;
+using System.Drawing;
+using System.IO;
 
 namespace DoctorFlow.Controllers.UserControllers
 {
@@ -24,9 +26,13 @@ namespace DoctorFlow.Controllers.UserControllers
 
         //
         // GET: /Profile/Details/5
-        public ActionResult Details(User user)
+        public ActionResult Details()
         {
-            
+            var userId = int.Parse(Session["USERID"].ToString());
+
+            var userAccount = new UserRepository();
+            var user = userAccount.getUser(userId);
+
             return View(user);
         }
         
@@ -38,8 +44,14 @@ namespace DoctorFlow.Controllers.UserControllers
             
             var userAccount = new UserRepository();
             var editUser = userAccount.getUser(userId);
-            
-            return View(editUser);
+
+            Mapper.CreateMap<User, UserProfileModel>();
+            var eUser = Mapper.Map<User, UserProfileModel>(editUser);
+            //eUser.Status = true;
+            //eUser.RegisterDate = DateTime.Now;
+            //eUser.PasswordFlag = DateTime.Now.AddDays(-1);
+
+            return View(eUser);
         }
 
         //
@@ -47,21 +59,55 @@ namespace DoctorFlow.Controllers.UserControllers
         [HttpPost]
         public ActionResult Edit(UserProfileModel registerModel)
         {
-            //UserRegisterModel registerModel
-            try
+            var validImageTypes = new string[]
             {
-                Mapper.CreateMap<User, UserRegisterModel>().ReverseMap();
-                var newUser = Mapper.Map<UserProfileModel, User>(registerModel);
-                newUser.Status = true;
-                newUser.RegisterDate = DateTime.Now;
-                newUser.PasswordFlag = DateTime.Now.AddDays(-1);
-                _userRepositry.CreateUser(newUser);
-                return RedirectToAction("Edit", "Profile");
-            }
-            catch
+                "image/gif",
+                "image/jpeg",
+                "image/pjpeg",
+                "image/png"
+            };
+
+            if (registerModel.UpladPhoto == null || registerModel.UpladPhoto.ContentLength == 0)
             {
-                return View();
+                ModelState.AddModelError("UpladPhoto", "This field is required");
             }
+            else if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
+            {
+                ModelState.AddModelError("UpladPhoto", "Please choose either a GIF, JPG or PNG image.");
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    //byte[] fileBytes = new byte[registerModel.UpladPhoto.ContentLength];
+
+                    byte[] fileBytes = null;
+                    using (var binaryReader = new BinaryReader(registerModel.UpladPhoto.InputStream))
+                    {
+                        fileBytes = binaryReader.ReadBytes(registerModel.UpladPhoto.ContentLength);
+                    }
+
+                    var userId = int.Parse(Session["USERID"].ToString());
+                    registerModel.Id = userId;
+                    registerModel.UpladPhoto = null;
+
+                    Mapper.CreateMap<User, UserProfileModel>().ReverseMap();
+                    var editUser = Mapper.Map<UserProfileModel, User>(registerModel);
+
+                    editUser.Photo = fileBytes;
+
+                    _userRepositry = new UserRepository();
+                    _userRepositry.EditUser(editUser);
+
+                    return RedirectToAction("Details", "Profile");
+                }
+                catch
+                {
+                    return View(registerModel);
+                }
+            }
+            return View(registerModel);
         }
 
         //

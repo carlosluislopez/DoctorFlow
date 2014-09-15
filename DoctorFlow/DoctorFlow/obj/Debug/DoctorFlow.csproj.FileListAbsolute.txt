@@ -37,3 +37,42 @@ C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow\bin\A
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.csprojResolveAssemblyReference.cache
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.dll
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\AutoMapper.Net4.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll.config
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Antlr3.Runtime.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\AutoMapper.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.DataLogic.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.SqlServer.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Newtonsoft.Json.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\RestSharp.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Helpers.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Mvc.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Optimization.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Razor.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Deployment.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Razor.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\WebGrease.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.DataLogic.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\AutoMapper.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.SqlServer.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\RestSharp.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Helpers.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Mvc.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Optimization.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Razor.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Deployment.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Razor.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Newtonsoft.Json.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\Antlr3.Runtime.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.csprojResolveAssemblyReference.cache
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.pdb
