@@ -23,9 +23,17 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        
-                        <li>@Html.ActionLink("Ingresar", "Create", "Login")</li>
-                        <li>@Html.ActionLink("Registrarse", "Create", "Register")</li>
+                        <li>@Html.ActionLink((Session["USERNAME"].ToString().IsEmpty()) ? "Ingresar" : Session["USERNAME"].ToString()
+                                             ,(Session["USERNAME"].ToString().IsEmpty()) ? "Create" : "Details"
+                                             , (Session["USERNAME"].ToString().IsEmpty()) ? "Login" : "Profile"
+                                            )
+                        </li>
+                        <li>
+                            @Html.ActionLink((Session["USERNAME"].ToString().IsEmpty()) ? "Registrarse" : "Cerrar Sesion"
+                                              , (Session["USERNAME"].ToString().IsEmpty()) ? "Create" : "Logout"
+                                              , (Session["USERNAME"].ToString().IsEmpty()) ? "Register" : "Login"
+                                            )
+                        </li>
                     </ul>
                 </div>
             </div>

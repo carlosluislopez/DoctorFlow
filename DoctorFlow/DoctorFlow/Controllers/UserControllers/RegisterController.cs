@@ -42,6 +42,7 @@ namespace DoctorFlow.Controllers.UserControllers
             var newUser = Mapper.Map<UserRegisterModel,User>(registerModel);
             newUser.Status = true;
             newUser.RegisterDate = DateTime.Now;
+            newUser.BirthDate = DateTime.Now;
             newUser.PasswordFlag = DateTime.Now.AddDays(-1);
             _userRepositry.CreateUser(newUser);
             return RedirectToAction("Create", "Login");

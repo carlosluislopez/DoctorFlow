@@ -26,6 +26,18 @@ namespace DoctorFlow.DataLogic
             }
             return false;
         }
+        public bool CreateDoctor(User newUser,Doctor newDoctor)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                
+                db.Users.Add(newUser);
+                db.Doctor.Add(newDoctor);
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
 
         public bool ResetPassword(string email, string newPassword, string passKey)
         {
@@ -121,5 +133,49 @@ namespace DoctorFlow.DataLogic
             return false;
         }
 
+        public string UserName(int UserId)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                try
+                {
+                    var userQueryable = (from u in db.Users
+                                         where Equals(u.Id, UserId)
+                                         select u
+                                    );
+
+                    if (!userQueryable.Any())
+                        return "";
+
+                    var user = userQueryable.First();
+                    return user.UserName;
+                }
+                catch (Exception ex) { }
+            }
+            return "";
+        }
+
+        public User EditUser2(User editUser)
+        {
+            return null;
+        }
+
+        public User getUser(int idUser)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                try
+                {
+                    var users = from user in db.Users
+                                where user.Id == idUser
+                                select user;
+
+                    if (users.Any())
+                        return users.First();
+                }
+                catch (Exception ex) { }
+            }
+            return null;
+        }
     }
 }

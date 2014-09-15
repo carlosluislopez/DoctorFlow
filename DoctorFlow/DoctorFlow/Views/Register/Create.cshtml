@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2></h2>
 
 
 @using (Html.BeginForm())
@@ -13,73 +12,81 @@
     @Html.AntiForgeryToken()
     <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
         </div>
-        <div class="col-md-12 col-md-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+        <div >
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 align="center" class="panel-title">Register Area</h3>
+                    <h3 style ="text-align: center"class="panel-title">Area de Registro de Pacientes</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="avatar"></div>
-                    <div class="row">
-                        <tr>
+                    <div >
                             <div class="form-horizontal">
-                                <h4>Register</h4>
                                 <hr />
                                 @Html.ValidationSummary(true)
-
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
-                                    <div class="col-md-10">
+                                    <div class="register-item">
+                                        @Html.LabelFor(model => model.UserName)
+                                        </div>
+                                    <div class="register-item">
+                                        
                                         @Html.EditorFor(model => model.UserName)
                                         @Html.ValidationMessageFor(model => model.UserName)
                                     </div>
-                                </div>
+                                    </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
-                                    <div class="col-md-10">
-                                        @Html.EditorFor(model => model.Name)
-                                        @Html.ValidationMessageFor(model => model.Name)
+                                    <div class="register-item">
+                                        @Html.LabelFor(model => model.Name)
+                                        </div>
+                                        <div class="register-item">
+                                            @Html.EditorFor(model => model.Name)
+                                            @Html.ValidationMessageFor(model => model.Name)
+                                        </div>
                                     </div>
-                                </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
-                                    <div class="col-md-10">
-                                        @Html.EditorFor(model => model.LastName)
-                                        @Html.ValidationMessageFor(model => model.LastName)
+                                    <div class="register-item">
+                                        @Html.LabelFor(model => model.LastName)
+                                        </div>
+                                        <div class="register-item">
+                                            @Html.EditorFor(model => model.LastName)
+                                            @Html.ValidationMessageFor(model => model.LastName)
+                                        </div>
                                     </div>
-                                </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
-                                    <div class="col-md-10">
-                                        @Html.EditorFor(model => model.Password)
-                                        @Html.ValidationMessageFor(model => model.Password)
+                                    <div class="register-item">
+                                        @Html.LabelFor(model => model.Password)
                                     </div>
-                                </div>
+                                        <div class="register-item">
+                                            @Html.EditorFor(model => model.Password)
+                                            @Html.ValidationMessageFor(model => model.Password)
+                                            
+                                        </div>
+                                    </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.ConfirmPassword, new { @class = "control-label col-md-2" })
-                                    <div class="col-md-10">
-                                        @Html.EditorFor(model => model.ConfirmPassword)
-                                        @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                                    <div class="register-item">
+                                        @Html.LabelFor(model => model.ConfirmPassword)
                                     </div>
-                                </div>
+                                        <div class="register-item">
+                                            @Html.EditorFor(model => model.ConfirmPassword)
+                                            @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                                        </div>
+                                    </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
-                                    <div class="col-md-10">
-                                        @Html.EditorFor(model => model.Email)
-                                        @Html.ValidationMessageFor(model => model.Email)
+                                    <div class="register-item">
+                                        @Html.LabelFor(model => model.Email)
+                                        </div>
+                                        <div class="register-item">
+                                            @Html.EditorFor(model => model.Email)
+                                            @Html.ValidationMessageFor(model => model.Email)
+                                        </div>
                                     </div>
-                                </div>
                             </div>
-                        </tr>
-                    
 
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
+                    <div class="register-item">
                         <input type="submit" value="Create" class="btn btn-default" />
                     </div>
                 </div>

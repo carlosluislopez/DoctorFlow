@@ -9,44 +9,44 @@ namespace DoctorFlow.Models
     public class UserProfileModel
     {
         [Required]
-        [Display(Name = "UserName")]
+        [Display(Name = "Nombre de Usuario")]
         public string UserName { get; set; }
 
         [Required]
-        [Display(Name = "Name")]
+        [Display(Name = "Nombre")]
         public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Last Name")]
+        [Display(Name = "Apellido")]
         public string LastName { get; set; }
 
         [Required]
-        [Display(Name = "E-Mail")]
+        [Display(Name = "Correo electrónico")]
         public string Email { get; set; }
 
         [DataType(DataType.DateTime)]
-        [Display(Name = "Birth Date")]
+        [Display(Name = "Fecha de Nacimiento")]
         public DateTime BirthDate { get; set; }
 
-        [Display(Name = "Social Security Number")]
+        [Display(Name = "Número de seguro social")]
         public string SocialSecurityNumber { get; set; }
 
-        [Display(Name = "Phone")]
+        [Display(Name = "Teléfono")]
         public string Phone { get; set; }
 
-        [Display(Name = "Marital Status")]
+        [Display(Name = "Estado civil")]
         public string MaritalStatus { get; set; }
 
-        [Display(Name = "Height (cm)")]
+        [Display(Name = "Altura (cm)")]
         public int Height { get; set; }
 
-        [Display(Name = "Blood Type")]
+        [Display(Name = "Tipo de sangre")]
         public string BloodType { get; set; }
 
-        [Display(Name = "Allergy")]
+        [Display(Name = "Alergias")]
         public string Allergy { get; set; }
 
-        [Display(Name = "Address")]
+        [Display(Name = "Dirección")]
 
         [DataType(DataType.MultilineText)]
         public string Address { get; set; }

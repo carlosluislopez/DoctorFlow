@@ -136,9 +136,11 @@
     <Compile Include="Controllers\UserControllers\LoginController.cs" />
     <Compile Include="Controllers\UserControllers\ProfileController.cs" />
     <Compile Include="Controllers\UserControllers\RegisterController.cs" />
+    <Compile Include="Controllers\UserControllers\RegisterDoctorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserModels\DoctorRegisterModel.cs" />
     <Compile Include="Models\UserModels\UserEditProfileModel.cs" />
     <Compile Include="Models\UserModels\UserPasswordRecoveryModel.cs" />
     <Compile Include="Models\UserModels\UserLoginModel.cs" />
@@ -146,6 +148,7 @@
     <Compile Include="Models\UserModels\UserProfileModel.cs" />
     <Compile Include="Models\UserModels\UserRegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -184,8 +187,10 @@
     <Content Include="Views\PasswordRecovery\Restore.cshtml" />
     <Content Include="Views\PasswordRecovery\RestoreError.cshtml" />
     <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Create.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\RegisterDoctor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

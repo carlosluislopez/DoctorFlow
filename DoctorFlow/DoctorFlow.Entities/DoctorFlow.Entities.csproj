@@ -71,7 +71,24 @@
     <Compile Include="Migrations\201409111824201_AddUserPhotoField.Designer.cs">
       <DependentUpon>201409111824201_AddUserPhotoField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201409140817347_Doctor.cs" />
+    <Compile Include="Migrations\201409140817347_Doctor.Designer.cs">
+      <DependentUpon>201409140817347_Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409140821260_Doctor2.cs" />
+    <Compile Include="Migrations\201409140821260_Doctor2.Designer.cs">
+      <DependentUpon>201409140821260_Doctor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409140830281_Doctor21.cs" />
+    <Compile Include="Migrations\201409140830281_Doctor21.Designer.cs">
+      <DependentUpon>201409140830281_Doctor21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409140918519_Doctor3.cs" />
+    <Compile Include="Migrations\201409140918519_Doctor3.Designer.cs">
+      <DependentUpon>201409140918519_Doctor3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +115,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201409111824201_AddUserPhotoField.resx">
       <DependentUpon>201409111824201_AddUserPhotoField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140817347_Doctor.resx">
+      <DependentUpon>201409140817347_Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140821260_Doctor2.resx">
+      <DependentUpon>201409140821260_Doctor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140830281_Doctor21.resx">
+      <DependentUpon>201409140830281_Doctor21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140918519_Doctor3.resx">
+      <DependentUpon>201409140918519_Doctor3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

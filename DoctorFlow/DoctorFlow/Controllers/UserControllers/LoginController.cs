@@ -38,9 +38,17 @@ namespace DoctorFlow.Controllers.UserControllers
             {
                 return RedirectToAction("Index", "Login"); 
             }
-            Console.WriteLine(user.Name);
-            return RedirectToAction("Details", "Profile",user); 
-            
+            Session.Add("USERNAME", user.Name);
+            Session.Add("USERID", user.Id);
+            return RedirectToAction("Details", "Profile",user);
+        }
+
+
+        public ActionResult Logout()
+        {
+            Session["USERNAME"] = string.Empty;
+            Session.Add("USERID", -1);
+            return RedirectToAction("Index", "Login"); 
         }
 
        

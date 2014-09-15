@@ -32,9 +32,14 @@ namespace DoctorFlow.Controllers.UserControllers
         
         //
         // GET: /Profile/Edit/5
-        public ActionResult Edit(User user)
+        public ActionResult Edit(string user)
         {
-            return View(user);
+            var userId = int.Parse(Session["USERID"].ToString());
+            
+            var userAccount = new UserRepository();
+            var editUser = userAccount.getUser(userId);
+            
+            return View(editUser);
         }
 
         //
