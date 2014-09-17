@@ -1,117 +1,147 @@
-﻿@using System.Reflection
+﻿
+<style type="text/css">
+    #ProfilePage {
+        /* Move it off the top of the page, then centre it horizontally */
+        margin: 50px auto;
+        width: 700px;
+        /* For visibility. Delete me */
+        border: 5px solid blue;
+    }
+
+    #LeftCol {
+        /* Move it to the left */
+        float: left;
+        width: 200px;
+        text-align: center;
+        /* Move it away from the content */
+        margin-right: 20px;
+        margin-left: 20px;
+        /* For visibility. Delete me */
+       /* border: 1px solid blue;*/
+    }
+
+    #Photo {
+        /* Width and height of photo container */
+        width: 200px;
+        height: 200px;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 50px;
+        /* For visibility. Delete me */
+        /*border: 1px solid blue;*/
+    }
+
+    #PhotoOptions {
+        text-align: center;
+        width: 200px;
+        /* For visibility. Delete me */
+        /*border: 1px solid blue;*/
+    }
+
+    #Info {
+        width: 400px;
+        text-align: center;
+        /* Move it to the right */
+        float: right;
+        margin-top: 15px;
+        /* For visibility. Delete me */
+        /* border: 1px solid blue;*/
+    }
+
+        #Info strong {
+            /* Give it a width */
+            display: inline-block;
+            width: 100px;
+            /* For visibility. Delete me */
+           /* border: 1px solid blue;*/
+        }
+
+        #Info span {
+            /* Give it a width */
+            display: inline-block;
+            width: 250px;
+            /* For visibility. Delete me */
+            /*border: 1px solid blue;*/
+        }
+</style>
+
+@using System.Reflection
 
 @model DoctorFlow.Entities.Models.User
 @{
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    
+
 }
 
-<h2>Details</h2>
+<div id="ProfilePage">
+    <div id="LeftCol">
+        <div id="Photo">
+            <img height="200px" width="200px" src="data:image/jpeg;base64,@System.Convert.ToBase64String(Model.Photo)" />
+        </div>
+        <div id="ProfileOptions">
+            
+        </div>
+        
+    </div>
 
-<div>
-    <h4>UserProfileModel</h4>
-	<hr />
-    <img height="100px" src="data:image/jpeg;base64,@System.Convert.ToBase64String(Model.Photo)" />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.UserName)
-        </dt>
+    <div id="Info">
+        <p >
+            @Html.DisplayNameFor(model => model.UserName):  @Html.DisplayFor(model => model.UserName)
+        </p>
+       
+        <p>
+            @Html.DisplayNameFor(model => model.Name):  @Html.DisplayFor(model => model.Name)
+        </p>
+       
+        <p>
+            @Html.DisplayNameFor(model => model.LastName):  @Html.DisplayNameFor(model => model.LastName)
+        </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.UserName)
-        </dd>
+        <p>
+            @Html.DisplayNameFor(model => model.Email):  @Html.DisplayFor(model => model.Email)  
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.BirthDate):  @Html.DisplayFor(model => model.BirthDate)
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.SocialSecurityNumber):  @Html.DisplayFor(model => model.SocialSecurityNumber)
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.Phone):  @Html.DisplayFor(model => model.Phone)
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.MaritalStatus):  @Html.DisplayFor(model => model.MaritalStatus)
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.Height):  @Html.DisplayFor(model => model.Height)
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.BloodType):  @Html.DisplayFor(model => model.BloodType)
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.Allergy):  @Html.DisplayFor(model => model.Allergy)
+        </p>
+        
+        <p>
+            @Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)
+        </p>
+        
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SocialSecurityNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SocialSecurityNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MaritalStatus)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MaritalStatus)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Height)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Height)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BloodType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BloodType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Allergy)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Allergy)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-    </dl>
+    <!-- Needed because other elements inside ProfilePage have floats -->
+    <div style="clear:both"></div>
 </div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", "Profile", Model.UserName) |
     @Html.ActionLink("Back to List", "Index")
