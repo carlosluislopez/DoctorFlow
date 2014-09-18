@@ -1,7 +1,7 @@
 ﻿@model DoctorFlow.Models.UserProfileModel
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit User";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -15,11 +15,19 @@
         <h4>UserProfileModel</h4>
         <hr />
         @Html.ValidationSummary(true)
-        <img height="100px" src="data:image/jpeg;base64,@System.Convert.ToBase64String(Model.Photo)" />
+        @{
+            var imgSrc = "";
+            if (Model.Photo != null)
+            {
+                var base64 = Convert.ToBase64String(Model.Photo);
+                imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
+            }
+        }
+        <img height="100px" src="@imgSrc" />
         <div class="form-group">
             @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UserName)
+                @Html.EditorFor(model => model.UserName)<br/>
                 @Html.ValidationMessageFor(model => model.UserName)
             </div>
         </div>
@@ -27,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Name)
+                @Html.EditorFor(model => model.Name)<br/>
                 @Html.ValidationMessageFor(model => model.Name)
             </div>
         </div>
@@ -35,7 +43,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.LastName)
+                @Html.EditorFor(model => model.LastName)<br/>
                 @Html.ValidationMessageFor(model => model.LastName)
             </div>
         </div>
@@ -43,7 +51,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Email)
+                @Html.EditorFor(model => model.Email)<br/>
                 @Html.ValidationMessageFor(model => model.Email)
             </div>
         </div>
@@ -51,7 +59,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BirthDate, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control datepicker", placeholder = "Enter Drop-off date here..." })
+                @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control datepicker", placeholder = "Enter Drop-off date here..." })<br/>
                 @Html.ValidationMessageFor(model => model.BirthDate)
             </div>
         </div>
@@ -59,7 +67,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SocialSecurityNumber, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.SocialSecurityNumber)
+                @Html.EditorFor(model => model.SocialSecurityNumber)<br/>
                 @Html.ValidationMessageFor(model => model.SocialSecurityNumber)
             </div>
         </div>
@@ -67,7 +75,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Phone)
+                @Html.EditorFor(model => model.Phone)<br/>
                 @Html.ValidationMessageFor(model => model.Phone)
             </div>
         </div>
@@ -83,7 +91,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Height, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Height)
+                @Html.EditorFor(model => model.Height)<br/>
                 @Html.ValidationMessageFor(model => model.Height)
             </div>
         </div>
@@ -91,7 +99,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BloodType, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.BloodType)
+                @Html.EditorFor(model => model.BloodType)<br/>
                 @Html.ValidationMessageFor(model => model.BloodType)
             </div>
         </div>
@@ -107,14 +115,17 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Address)
+                @Html.EditorFor(model => model.Address)<br/>
                 @Html.ValidationMessageFor(model => model.Address)
             </div>
         </div>
 
-        <div>
-            @Html.LabelFor(m => m.UpladPhoto)
-            @Html.TextBoxFor(m => m.UpladPhoto, new { type = "file" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.UpladPhoto, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.UpladPhoto, new { type = "file" })<br />
+                @Html.ValidationMessageFor(model => model.UpladPhoto)
+            </div>
         </div>
 
         <div class="form-group">
@@ -126,5 +137,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Details")
 </div>

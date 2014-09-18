@@ -28,5 +28,6 @@ namespace DoctorFlow.Entities.Models
         public string Allergy { get; set; }
         public string Address { get; set; }
         public byte[] Photo { get; set; }
+        public string ActivateCode { get; set; }
     }
 }
