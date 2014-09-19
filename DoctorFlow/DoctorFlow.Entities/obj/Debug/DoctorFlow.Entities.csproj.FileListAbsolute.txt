@@ -19,26 +19,6 @@ C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.Entit
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor2.resources
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor21.resources
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor3.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.xml
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Test.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.FlaDatetime.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddUserFields.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddUserPhotoField.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor2.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor21.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor3.resources
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb
@@ -60,3 +40,24 @@ C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\Do
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Test.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.FlaDatetime.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddUserFields.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddUserPhotoField.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor2.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor21.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor3.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddActivateCode.resources
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb

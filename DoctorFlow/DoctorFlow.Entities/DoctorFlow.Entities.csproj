@@ -87,6 +87,10 @@
     <Compile Include="Migrations\201409140918519_Doctor3.Designer.cs">
       <DependentUpon>201409140918519_Doctor3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201409180658051_AddActivateCode.cs" />
+    <Compile Include="Migrations\201409180658051_AddActivateCode.Designer.cs">
+      <DependentUpon>201409180658051_AddActivateCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Rol.cs" />
@@ -127,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201409140918519_Doctor3.resx">
       <DependentUpon>201409140918519_Doctor3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409180658051_AddActivateCode.resx">
+      <DependentUpon>201409180658051_AddActivateCode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

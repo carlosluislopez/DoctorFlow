@@ -1,7 +1,7 @@
 ﻿@model DoctorFlow.Models.UserRegisterModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Register User";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -28,7 +28,7 @@
                                         </div>
                                     <div class="register-item">
                                         
-                                        @Html.EditorFor(model => model.UserName)
+                                        @Html.EditorFor(model => model.UserName)<br/>
                                         @Html.ValidationMessageFor(model => model.UserName)
                                     </div>
                                     </div>
@@ -38,7 +38,7 @@
                                         @Html.LabelFor(model => model.Name)
                                         </div>
                                         <div class="register-item">
-                                            @Html.EditorFor(model => model.Name)
+                                            @Html.EditorFor(model => model.Name)<br/>
                                             @Html.ValidationMessageFor(model => model.Name)
                                         </div>
                                     </div>
@@ -48,7 +48,7 @@
                                         @Html.LabelFor(model => model.LastName)
                                         </div>
                                         <div class="register-item">
-                                            @Html.EditorFor(model => model.LastName)
+                                            @Html.EditorFor(model => model.LastName)<br/>
                                             @Html.ValidationMessageFor(model => model.LastName)
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                         @Html.LabelFor(model => model.Password)
                                     </div>
                                         <div class="register-item">
-                                            @Html.EditorFor(model => model.Password)
+                                            @Html.EditorFor(model => model.Password)<br/>
                                             @Html.ValidationMessageFor(model => model.Password)
                                             
                                         </div>
@@ -69,7 +69,7 @@
                                         @Html.LabelFor(model => model.ConfirmPassword)
                                     </div>
                                         <div class="register-item">
-                                            @Html.EditorFor(model => model.ConfirmPassword)
+                                            @Html.EditorFor(model => model.ConfirmPassword)<br/>
                                             @Html.ValidationMessageFor(model => model.ConfirmPassword)
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                                         @Html.LabelFor(model => model.Email)
                                         </div>
                                         <div class="register-item">
-                                            @Html.EditorFor(model => model.Email)
+                                            @Html.EditorFor(model => model.Email)<br/>
                                             @Html.ValidationMessageFor(model => model.Email)
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@
 
                 <div class="form-group">
                     <div class="register-item">
-                        <input type="submit" value="Create" class="btn btn-default" />
+                        <input type="submit" value="Register" class="btn btn-default" />
                     </div>
                 </div>
             </div>

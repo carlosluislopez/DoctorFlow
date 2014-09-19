@@ -141,6 +141,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModels\DoctorRegisterModel.cs" />
+    <Compile Include="Models\UserModels\UserActivateModel.cs" />
     <Compile Include="Models\UserModels\UserEditProfileModel.cs" />
     <Compile Include="Models\UserModels\UserPasswordRecoveryModel.cs" />
     <Compile Include="Models\UserModels\UserLoginModel.cs" />
@@ -191,6 +192,7 @@
     <Content Include="Views\Login\Create.cshtml" />
     <Content Include="Views\RegisterDoctor\Index.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\Register\Activate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

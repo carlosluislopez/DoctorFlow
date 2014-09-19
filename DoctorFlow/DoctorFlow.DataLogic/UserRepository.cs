@@ -10,19 +10,25 @@ using System.Data.Entity;
 using DoctorFlow.Entities;
 using DoctorFlow.Entities.Context;
 using DoctorFlow.Entities.Models;
+using System.Security.Cryptography;
 
 namespace DoctorFlow.DataLogic
 {
     public class UserRepository : IUserRepository
     {
-
         public bool CreateUser(User newUser)
         {
             using (var db=new DoctorFlowContext())
             {
-                db.Users.Attach(newUser);
-                db.SaveChanges();
-                return true;
+                try
+                {
+                    newUser.Password = EncriptText(newUser.Password);
+                    newUser.Status = false;
+                    //db.Users.Attach(newUser);
+                    db.Users.Add(newUser);
+                    db.SaveChanges();
+                    return true;
+                }catch(Exception ex){}
             }
             return false;
         }
@@ -30,15 +36,19 @@ namespace DoctorFlow.DataLogic
         {
             using (var db = new DoctorFlowContext())
             {
-                
-                db.Users.Add(newUser);
-                db.Doctor.Add(newDoctor);
-                db.SaveChanges();
-                return true;
+                try
+                {
+                    newUser.Password = EncriptText(newUser.Password);
+                    newUser.Status = false;
+                    db.Users.Add(newUser);
+                    db.Doctor.Add(newDoctor);
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex) { }
             }
             return false;
         }
-
         public bool ResetPassword(string email, string newPassword, string passKey)
         {
             using (var db = new DoctorFlowContext())
@@ -54,7 +64,7 @@ namespace DoctorFlow.DataLogic
                     return false;
                 user.TempPassword = null;
                 user.PasswordFlag = today;
-                user.Password = newPassword;
+                user.Password = EncriptText(newPassword);
                 db.SaveChanges();
             }
             return true;
@@ -84,20 +94,25 @@ namespace DoctorFlow.DataLogic
             {
                 try
                 {
+                    //Equals(user.Password, password) && 
                     var users = from user in db.Users
-                                where Equals(user.Password, password)
-                                && (Equals(user.Email, userNameEmail) || Equals(user.UserName, userNameEmail))
+                                where (Equals(user.Email, userNameEmail) || Equals(user.UserName, userNameEmail))
                                 && user.Status
                                 select user;
 
-                    if (users.Any())
-                        return users.First();
+                    if (!users.Any())
+                        return null;
+
+                    var userCurrent = users.First();
+                    if (EncriptTextValid(password, userCurrent.Password))
+                        return userCurrent;
+
+                    return null;
                 }
                 catch (Exception ex) { }
             }
             return null;
         }
-
         public bool EditUser(User EditUser)
         {
             using (var db = new DoctorFlowContext())
@@ -132,7 +147,6 @@ namespace DoctorFlow.DataLogic
             }
             return false;
         }
-
         public string UserName(int UserId)
         {
             using (var db = new DoctorFlowContext())
@@ -154,12 +168,10 @@ namespace DoctorFlow.DataLogic
             }
             return "";
         }
-
         public User EditUser2(User editUser)
         {
             return null;
         }
-
         public User getUser(int idUser)
         {
             using (var db = new DoctorFlowContext())
@@ -176,6 +188,78 @@ namespace DoctorFlow.DataLogic
                 catch (Exception ex) { }
             }
             return null;
+        }
+        public bool ActivateUser(string userNameEmail, string password, string activateCode)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                try
+                {
+                    //Equals(user.Password, password) && 
+                    var users = from user in db.Users
+                                where (Equals(user.Email, userNameEmail) || Equals(user.UserName, userNameEmail))
+                                && Equals(user.ActivateCode, activateCode)
+                                select user;
+
+                    if (!users.Any())
+                        return false;
+
+                    var userCurrent = users.First();
+                    if (EncriptTextValid(password, userCurrent.Password))
+                    {
+                        userCurrent.Status = true;
+                        userCurrent.ActivateCode = "";
+                        //db.Users.Attach(newUser);
+                        db.SaveChanges();
+                        return true;
+                    }                       
+                }
+                catch (Exception ex) { }
+            }
+            return false;
+        }
+        private string GetMd5Hash(MD5 md5Hash, string input)
+        {
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+            StringBuilder sBuilder = new StringBuilder();
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+            return sBuilder.ToString();
+        }
+        private bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
+        {
+            string hashOfInput = GetMd5Hash(md5Hash, input);
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+            
+            if (0 == comparer.Compare(hashOfInput, hash))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private string EncriptText(string source)
+        {
+            string hash = source;
+            using (MD5 md5Hash = MD5.Create())
+            {
+                hash = GetMd5Hash(md5Hash, source);
+            }
+
+            return hash;
+        }
+        private bool EncriptTextValid(string input, string hash)
+        {
+            using (MD5 md5Hash = MD5.Create())
+            {
+                if (VerifyMd5Hash(md5Hash, input, hash))
+                    return true;
+            }
+            return false;
         }
     }
 }

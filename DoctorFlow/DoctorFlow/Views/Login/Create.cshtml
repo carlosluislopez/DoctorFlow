@@ -1,7 +1,7 @@
 ﻿@model DoctorFlow.Models.UserLoginModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -24,7 +24,7 @@
                             @Html.LabelFor(model => model.EmailOrUserName)
                         </div>
                         <div class="register-item">
-                            @Html.EditorFor(model => model.EmailOrUserName)
+                            @Html.EditorFor(model => model.EmailOrUserName)<br/>
                             @Html.ValidationMessageFor(model => model.EmailOrUserName)
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                             @Html.LabelFor(model => model.Password)
                         </div>
                         <div class="register-item">
-                            @Html.EditorFor(model => model.Password)
+                            @Html.EditorFor(model => model.Password)<br/>
                             @Html.ValidationMessageFor(model => model.Password)
                         </div>
                     </div>

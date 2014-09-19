@@ -13,21 +13,6 @@ C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.DataL
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
 C:\Users\Moriya Shrine\Desktop\DoctorFlow\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.Net4.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll.config
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.pdb
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.pdb
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.xml
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.xml
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
-C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.Net4.dll
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll.config
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll
@@ -43,3 +28,18 @@ C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\E
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.Net4.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll.config
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.DataLogic.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\AutoMapper.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.csprojResolveAssemblyReference.cache
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.dll
+C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.DataLogic\obj\Debug\DoctorFlow.DataLogic.pdb

@@ -1,6 +1,6 @@
 ﻿@model DoctorFlow.Models.UserModels.UserPasswordResetModel
 @{
-    ViewBag.Title = "Restore";
+    ViewBag.Title = "Restaurar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,22 +13,22 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Email)
         <div>
-            @Html.EditorFor(model => model.Email)
+            @Html.EditorFor(model => model.Email)<br/>
             @Html.ValidationMessageFor(model => model.Email)
         </div>
         @Html.LabelFor(model => model.PassKey)
         <div>
-            @Html.EditorFor(model => model.PassKey)
+            @Html.EditorFor(model => model.PassKey)<br/>
             @Html.ValidationMessageFor(model => model.PassKey)
         </div>
         @Html.LabelFor(model => model.NewPassword)
         <div>
-            @Html.EditorFor(model => model.NewPassword)
+            @Html.EditorFor(model => model.NewPassword)<br/>
             @Html.ValidationMessageFor(model => model.NewPassword)
         </div>
         @Html.LabelFor(model => model.ConfirmNewPassword)
         <div>
-            @Html.EditorFor(model => model.ConfirmNewPassword)
+            @Html.EditorFor(model => model.ConfirmNewPassword)<br/>
             @Html.ValidationMessageFor(model => model.ConfirmNewPassword)
         </div>
     </div>
