@@ -147,6 +147,33 @@ namespace DoctorFlow.DataLogic
             }
             return false;
         }
+
+        public bool DisableUser(User EditUser)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                var userQueryable = (from u in db.Users
+                                     where u.Id == EditUser.Id
+                                     select u
+                                    );
+
+                if (!userQueryable.Any())
+                    return false;
+
+                var user = userQueryable.First();
+
+                user.ActivateCode = EditUser.ActivateCode;
+                user.Status = EditUser.Status;
+                try
+                {
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex) { }
+            }
+            return false;
+        }
+
         public string UserName(int UserId)
         {
             using (var db = new DoctorFlowContext())

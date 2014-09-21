@@ -58,8 +58,7 @@ namespace DoctorFlow.Controllers.UserControllers
                 }
 
                 Mapper.CreateMap<User, UserRegisterModel>().ReverseMap();
-                var newUser = Mapper.Map<UserRegisterModel, User>(registerModel);
-                newUser.Status = true;
+                var newUser = Mapper.Map<UserRegisterModel, User>(registerModel);                
                 newUser.RegisterDate = DateTime.Now;
                 newUser.BirthDate = DateTime.Now;
                 newUser.PasswordFlag = DateTime.Now.AddDays(-1);
@@ -124,12 +123,43 @@ namespace DoctorFlow.Controllers.UserControllers
             if (ModelState.IsValid)
             {
                 var userAccount = new UserRepository();
-                var user = userAccount.ActivateUser(userModel.EmailOrUserName, userModel.Password, userModel.ActivateCode);
-
-                return RedirectToAction("Index", "Home");
+                if(userAccount.ActivateUser(userModel.EmailOrUserName, userModel.Password, userModel.ActivateCode))
+                    return RedirectToAction("Index", "Home");
             }
             return View(userModel);
         }
 
+        public ActionResult Disable()
+        {
+            var userId = int.Parse(Session["USERID"].ToString());
+
+            var userAccount = new UserRepository();
+            var disableUser = userAccount.getUser(userId);
+
+            disableUser.Status = false;
+
+
+            const int passwordLength = 8;
+            const int numberOfNonAlphanumericCharacters = 2;
+            var generatePassword = Membership.GeneratePassword(passwordLength, numberOfNonAlphanumericCharacters);
+
+            disableUser.ActivateCode = generatePassword;
+
+            if (_userRepositry.DisableUser(disableUser))
+            {
+                string temporalDomain = "http://localhost:1744";
+                string link = temporalDomain + "/Register/Activate";//TODO
+                string message = string.Format("Visite el siguiente enlace: \"{0}?ActivateCode={1}\" para volver activar su cuenta.", link, generatePassword);
+                message += Environment.NewLine;
+                message += "(Copie el enlace y peguelo en la barra de direcciones de su navegador web).";
+                SendSimpleMessage(disableUser.Email, message);
+
+                Session["USERNAME"] = string.Empty;
+                Session.Add("USERID", -1);
+
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

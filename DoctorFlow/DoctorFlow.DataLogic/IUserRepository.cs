@@ -10,6 +10,7 @@ namespace DoctorFlow.DataLogic
         User Login(string userNameEmail, string password);
         bool ResetPassword(string email, string newPassword, string passKey);
         bool EditUser(User EditUser);
+        bool DisableUser(User EditUser);
         string UserName(int UserId);
         User EditUser2(User editUser);
         
