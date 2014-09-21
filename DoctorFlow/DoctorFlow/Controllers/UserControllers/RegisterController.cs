@@ -39,6 +39,24 @@ namespace DoctorFlow.Controllers.UserControllers
         {
             if (ModelState.IsValid)
             {
+                var user = _userRepositry.getUser(registerModel.Email);
+                if (user != null)
+                {
+                    registerModel.Email = "";
+                    ViewBag.Errors = new[]
+                    {
+                        "•El correo que ingreso ya existe"
+                    };
+                    return View(registerModel);
+                }
+
+                user = _userRepositry.getUser(registerModel.UserName);
+                if (user != null)
+                {
+                    registerModel.UserName = "";
+                    return View(registerModel);
+                }
+
                 Mapper.CreateMap<User, UserRegisterModel>().ReverseMap();
                 var newUser = Mapper.Map<UserRegisterModel, User>(registerModel);
                 newUser.Status = true;

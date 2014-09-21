@@ -38,6 +38,20 @@ namespace DoctorFlow.Controllers.UserControllers
         {
             if (ModelState.IsValid)
             {
+                var user = _userRepositry.getUser(registerModel.Email);
+                if (user != null)
+                {
+                    registerModel.Email = "";
+                    return View(registerModel);
+                }
+
+                user = _userRepositry.getUser(registerModel.UserName);
+                if (user != null)
+                {
+                    registerModel.UserName = "";
+                    return View(registerModel);
+                }
+
                 Mapper.CreateMap<User, DoctorRegisterModel>().ReverseMap();
                 Mapper.CreateMap<Doctor, DoctorRegisterModel>().ReverseMap();
                 var newUser = Mapper.Map<DoctorRegisterModel, User>(registerModel);

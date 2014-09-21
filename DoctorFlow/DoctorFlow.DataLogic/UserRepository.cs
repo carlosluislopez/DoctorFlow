@@ -189,6 +189,25 @@ namespace DoctorFlow.DataLogic
             }
             return null;
         }
+        public User getUser(string userNameEmail) 
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                try
+                {
+                    var users = from user in db.Users
+                                where user.UserName.Equals(userNameEmail)
+                                      || user.Email.Equals(userNameEmail)
+                                select user;
+
+                    if (users.Any())
+                        return users.First();
+                }
+                catch (Exception ex) { }
+            }
+            return null;
+        }
+
         public bool ActivateUser(string userNameEmail, string password, string activateCode)
         {
             using (var db = new DoctorFlowContext())

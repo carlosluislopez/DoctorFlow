@@ -12,7 +12,9 @@ namespace DoctorFlow.DataLogic
         bool EditUser(User EditUser);
         string UserName(int UserId);
         User EditUser2(User editUser);
+        
         bool ActivateUser(string userNameEmail, string password, string activateCode);
         User getUser(int idUser);
+        User getUser(string userNameEmail);
     }
 }
