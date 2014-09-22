@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Validators\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +150,6 @@
     <Compile Include="Models\UserModels\UserProfileModel.cs" />
     <Compile Include="Models\UserModels\UserRegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validators\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

@@ -1,5 +1,14 @@
 ﻿@model DoctorFlow.Models.UserProfileModel
-
+<title>jQuery UI Datepicker - Default functionality</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+    </script>
 @{
     ViewBag.Title = "Edit User";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,7 +19,7 @@
 @using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>UserProfileModel</h4>
         <hr />
@@ -23,7 +32,7 @@
                 imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
             }
         }
-        <img height="100px" src="@imgSrc" />
+        <img height="100" src="@imgSrc" />
         <div class="form-group">
             @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -59,7 +68,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BirthDate, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control datepicker", placeholder = "Enter Drop-off date here..." })<br/>
+                @Html.EditorFor((model) => model.BirthDate, new { @class = "form-control", placeholder = "Enter Drop-off date here...",id = "datepicker" })<br/>
                 @Html.ValidationMessageFor(model => model.BirthDate)
             </div>
         </div>

@@ -65,6 +65,7 @@
         }
 </style>
 
+@using System.Globalization
 @model DoctorFlow.Models.UserProfileModel
 @{
     ViewBag.Title = "Detail User";
@@ -83,7 +84,7 @@
                 }
             }
             <img height="200" src="@imgSrc" alt="tio1.jpg"/>
-        </div>S
+        </div>
         <div id="ProfileOptions">
         </div>
     </div>
@@ -102,7 +103,7 @@
             @Html.LabelFor(model => model.Email):  @Html.DisplayFor(model => model.Email)  
         </p>
         <p>
-            @Html.LabelFor(model => model.BirthDate):  @Html.DisplayFor(model => model.BirthDate)
+            @Html.LabelFor(model => model.BirthDate):  @Html.DisplayFor(model => model.BirthDate) 
         </p>
         <p>
             @Html.LabelFor(model => model.SocialSecurityNumber):  @Html.DisplayFor(model => model.SocialSecurityNumber)
