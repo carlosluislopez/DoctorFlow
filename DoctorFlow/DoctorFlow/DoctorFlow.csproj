@@ -169,6 +169,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Home\About.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -193,6 +194,7 @@
     <Content Include="Views\RegisterDoctor\Index.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
     <Content Include="Views\Register\Activate.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

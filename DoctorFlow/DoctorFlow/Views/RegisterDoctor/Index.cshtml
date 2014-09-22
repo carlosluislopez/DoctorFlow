@@ -6,12 +6,12 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div class="col-md-5   pull-right col-md-offset-3 ">
+    <div class="col-md-5 pull-right col-md-offset-3 ">
     </div>
     <div>
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 style="text-align: center" class="panel-title">Area de Registro para Doctores</h3>
+                <h1 class="panel-title" >Registrarse como Medico</h1>
             </div>
             <div class="panel-body">
                 <div>
@@ -23,7 +23,6 @@
                                 @Html.LabelFor(model => model.UserName)
                             </div>
                             <div class="register-item">
-
                                 @Html.EditorFor(model => model.UserName)<br/>
                                 @Html.ValidationMessageFor(model => model.UserName)
                             </div>
@@ -101,7 +100,7 @@
 
                     <div class="form-group">
                         <div class="register-item">
-                            <input type="submit" value="Create" class="btn btn-default" />
+                            <input type="submit" value="Registrarse" class="btn btn-primary" />
                         </div>
                     </div>
                 </div>
@@ -109,5 +108,4 @@
             </div>
         </div>
     </div>
-
 }

@@ -16,46 +16,35 @@ namespace DoctorFlow.Controllers.UserControllers
     public class ProfileController : Controller
     {
         private IUserRepository _userRepositry;
-        //
-        // GET: /Profile/
-        public ActionResult Index()
-        {
 
-            return View();
-        }
-
-        //
-        // GET: /Profile/Details/5
         public ActionResult Details()
         {
-            var userId = int.Parse(Session["USERID"].ToString());
+            if (Session == null) return RedirectToAction("index", "Home");
+            int userId = int.Parse(Session["USERID"].ToString());
 
-            var userAccount = new UserRepository();
-            var user = userAccount.getUser(userId);
-
-            return View(user);
-        }
-        
-        //
-        // GET: /Profile/Edit/5
-        public ActionResult Edit(string user)
-        {
-            var userId = int.Parse(Session["USERID"].ToString());
-            
-            var userAccount = new UserRepository();
-            var editUser = userAccount.getUser(userId);
+            UserRepository userAccount = new UserRepository();
+            User user = userAccount.getUser(userId);
 
             Mapper.CreateMap<User, UserProfileModel>();
-            var eUser = Mapper.Map<User, UserProfileModel>(editUser);
-            //eUser.Status = true;
-            //eUser.RegisterDate = DateTime.Now;
-            //eUser.PasswordFlag = DateTime.Now.AddDays(-1);
+            UserProfileModel eUser = Mapper.Map<User, UserProfileModel>(user);
+
+            return View(eUser);
+        }
+        
+
+        public ActionResult Edit(string user)
+        {
+            int userId = int.Parse(Session["USERID"].ToString());
+            
+            UserRepository userAccount = new UserRepository();
+            User editUser = userAccount.getUser(userId);
+
+            Mapper.CreateMap<User, UserProfileModel>();
+            UserProfileModel eUser = Mapper.Map<User, UserProfileModel>(editUser);
 
             return View(eUser);
         }
 
-        //
-        // POST: /Profile/Edit/5
         [HttpPost]
         public ActionResult Edit(UserProfileModel registerModel)
         {

@@ -28,17 +28,20 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink((Session["USERNAME"].ToString().IsEmpty()) ? "Ingresar" : Session["USERNAME"].ToString()
-                                             ,(Session["USERNAME"].ToString().IsEmpty()) ? "Create" : "Details"
-                                             , (Session["USERNAME"].ToString().IsEmpty()) ? "Login" : "Profile"
-                                            )
+                        <li>
+                            @Html.ActionLink("Inicio","Index","Home")
                         </li>
                         <li>
-                            @Html.ActionLink((Session["USERNAME"].ToString().IsEmpty()) ? "Registrarse" : "Cerrar Sesion"
-                                              , (Session["USERNAME"].ToString().IsEmpty()) ? "Create" : "Logout"
-                                              , (Session["USERNAME"].ToString().IsEmpty()) ? "Register" : "Login"
-                                            )
+                            @(((Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty())) ? Html.ActionLink("Ingresar", "Create", "Login") : Html.ActionLink(Session["USERNAME"].ToString(), "Details", "Profile"))
                         </li>
+                        <li>
+                            @(((Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty()))?Html.ActionLink("Registrar como Usuario", "Create", "Register"):Html.ActionLink("Salir", "Logout", "Login"))
+                        </li>
+                            @if (Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty())
+                            {<li>
+                                    @Html.ActionLink("Registrar como Medico", "Index", "RegisterDoctor");
+                             </li>
+                            }
                     </ul>
                 </div>
             </div>

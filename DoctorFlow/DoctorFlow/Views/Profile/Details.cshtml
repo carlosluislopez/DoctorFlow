@@ -65,11 +65,10 @@
         }
 </style>
 
-@model DoctorFlow.Entities.Models.User
+@model DoctorFlow.Models.UserProfileModel
 @{
     ViewBag.Title = "Detail User";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
 
 <div id="ProfilePage">
@@ -83,65 +82,49 @@
                     imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
                 }
             }
-            <img height="200px" width="200px" src="@imgSrc" />
-        </div>
+            <img height="200" src="@imgSrc" alt="tio1.jpg"/>
+        </div>S
         <div id="ProfileOptions">
-            
         </div>
-        
     </div>
 
     <div id="Info">
         <p >
-            @Html.DisplayNameFor(model => model.UserName):  @Html.DisplayFor(model => model.UserName)
+            @Html.LabelFor(model => model.UserName):  @Html.DisplayFor(model => model.UserName)
         </p>
-       
         <p>
-            @Html.DisplayNameFor(model => model.Name):  @Html.DisplayFor(model => model.Name)
+            @Html.LabelFor(model => model.Name):  @Html.DisplayFor(model => model.Name)
         </p>
-       
         <p>
-            @Html.DisplayNameFor(model => model.LastName):  @Html.DisplayNameFor(model => model.LastName)
+            @Html.LabelFor(model => model.LastName):  @Html.DisplayFor(model => model.LastName)
         </p>
-
         <p>
-            @Html.DisplayNameFor(model => model.Email):  @Html.DisplayFor(model => model.Email)  
+            @Html.LabelFor(model => model.Email):  @Html.DisplayFor(model => model.Email)  
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.BirthDate):  @Html.DisplayFor(model => model.BirthDate)
+            @Html.LabelFor(model => model.BirthDate):  @Html.DisplayFor(model => model.BirthDate)
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.SocialSecurityNumber):  @Html.DisplayFor(model => model.SocialSecurityNumber)
+            @Html.LabelFor(model => model.SocialSecurityNumber):  @Html.DisplayFor(model => model.SocialSecurityNumber)
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.Phone):  @Html.DisplayFor(model => model.Phone)
+            @Html.LabelFor(model => model.Phone):  @Html.DisplayFor(model => model.Phone)
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.MaritalStatus):  @Html.DisplayFor(model => model.MaritalStatus)
+            @Html.LabelFor(model => model.MaritalStatus):  @Html.DisplayFor(model => model.MaritalStatus)
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.Height):  @Html.DisplayFor(model => model.Height)
+            @Html.LabelFor(model => model.Height):  @Html.DisplayFor(model => model.Height)
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.BloodType):  @Html.DisplayFor(model => model.BloodType)
+            @Html.LabelFor(model => model.BloodType):  @Html.DisplayFor(model => model.BloodType)
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.Allergy):  @Html.DisplayFor(model => model.Allergy)
+            @Html.LabelFor(model => model.Allergy):  @Html.DisplayFor(model => model.Allergy)
         </p>
-        
         <p>
-            @Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)
+            @Html.LabelFor(model => model.Address): @Html.DisplayFor(model => model.Address)
         </p>
-        
-
-
     </div>
 
     <!-- Needed because other elements inside ProfilePage have floats -->
@@ -149,7 +132,7 @@
 </div>
 
 <p>
-    @Html.ActionLink("Edit", "Edit", "Profile") |
-    @Html.ActionLink("Disable", "Disable", "Register") |
-    @Html.ActionLink("Back to List", "Index", "Home")
+    @Html.ActionLink("Editar", "Edit", "Profile") |
+    @Html.ActionLink("Deshabilitar", "Disable", "Register") |
+    @Html.ActionLink("Inicio", "Index", "Home")
 </p>

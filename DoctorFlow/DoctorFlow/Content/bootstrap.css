@@ -4247,12 +4247,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav {
+    line-height: 2px;
   margin: 7.5px -15px;
 }
 
 .navbar-nav > li > a {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5;
   line-height: 20px;
 }
 
@@ -5413,9 +5414,11 @@ a.list-group-item:focus {
 }
 
 .panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 16px;
+    text-align: center;
+    font-family: arial,sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
 }
 
 .panel-title > a {
@@ -5551,8 +5554,9 @@ a.list-group-item:focus {
 }
 
 .panel-info > .panel-heading {
-  color: #3a87ad;
-  background-color: #d9edf7;
+    font-family: arial;
+  color: #000000;
+  background-color: #ffffff;
   border-color: #bce8f1;
 }
 
