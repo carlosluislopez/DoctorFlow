@@ -138,7 +138,9 @@ namespace DoctorFlow.DataLogic
                 user.Email = EditUser.Email;
                 user.Height = EditUser.Height;
                 user.MaritalStatus = EditUser.MaritalStatus;
-                user.Photo = EditUser.Photo;
+                user.Allergy = EditUser.Allergy;
+                if(EditUser.Photo != null)
+                    user.Photo = EditUser.Photo;
                 try
                 {
                     db.SaveChanges();
