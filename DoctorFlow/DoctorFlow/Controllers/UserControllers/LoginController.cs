@@ -41,7 +41,7 @@ namespace DoctorFlow.Controllers.UserControllers
             {
                 ViewBag.Errors = new[]
                 {
-                    "•Ha ocurrido un error inesperado al intentar subir la imagen!"
+                    "•El usuario no existe!"
                 };
                 return View(loginModel);
             }

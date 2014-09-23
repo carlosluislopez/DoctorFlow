@@ -106,15 +106,24 @@ namespace DoctorFlow.Controllers.UserControllers
 
         public ActionResult Activate()
         {
-            if(Request.QueryString.Count == 0)
-                return RedirectToAction("Index", "Home");
+            if (Request.QueryString.Count == 0)
+            {
+                ViewBag.Errors = new[]
+                    {
+                        "•No se encontro el ningun registro de este tipo."
+                    };
+                return View();
+            }
 
-            if(Request.QueryString["ActivateCode"].ToString() == "")
-                return RedirectToAction("Index", "Home");
-
-            var userModel = new UserActivateModel();
-            userModel.ActivateCode = Request.QueryString["ActivateCode"].ToString();
-
+            if (Request.QueryString["ActivateCode"] == "")
+            {
+                ViewBag.Errors = new[]
+                    {
+                        "•El codigo se encuentra vacio!"
+                    };
+                return View();
+            }
+            var userModel = new UserActivateModel {ActivateCode = Request.QueryString["ActivateCode"]};
             return View(userModel);
         }
 
@@ -122,12 +131,21 @@ namespace DoctorFlow.Controllers.UserControllers
         [AllowAnonymous]
         public ActionResult Activate(UserActivateModel userModel)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var userAccount = new UserRepository();
-                if(userAccount.ActivateUser(userModel.EmailOrUserName, userModel.Password, userModel.ActivateCode))
-                    return RedirectToAction("Index", "Home");
+                ViewBag.Errors = new[]
+                    {
+                        "•Llena todos los campos por favor!"
+                    };
+                return View(userModel);
             }
+            var userAccount = new UserRepository();
+            if(userAccount.ActivateUser(userModel.EmailOrUserName, userModel.Password, userModel.ActivateCode))
+                return RedirectToAction("Index", "Home");
+            ViewBag.Errors = new[]
+                    {
+                        "•No se encontro tu usuario, o escribiste mal tu contraseña!"
+                    };
             return View(userModel);
         }
 
