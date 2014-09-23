@@ -1,4 +1,12 @@
-﻿body {
+﻿
+.page-error {
+    color: #dc143c;
+    font-size: 90%;
+    font-family:helvetica;
+    font-style: italic;
+}
+
+body {
     padding-top: 0;
     padding-bottom: 20px;
 }
@@ -40,3 +48,4 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+

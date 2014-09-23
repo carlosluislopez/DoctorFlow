@@ -40,7 +40,7 @@
 
     #Info {
         width: 400px;
-        text-align: center;
+        text-align: left;
         /* Move it to the right */
         float: right;
         margin-top: 15px;
@@ -63,9 +63,9 @@
             /* For visibility. Delete me */
             /*border: 1px solid blue;*/
         }
+        
 </style>
 
-@using System.Globalization
 @model DoctorFlow.Models.UserProfileModel
 @{
     ViewBag.Title = "Detail User";
@@ -83,7 +83,7 @@
                     imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
                 }
             }
-            <img height="200" src="@imgSrc" alt="tio1.jpg"/>
+                <img class="img-details" src="@imgSrc" alt="tio1.jpg" />
         </div>
         <div id="ProfileOptions">
         </div>

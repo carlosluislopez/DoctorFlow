@@ -20,27 +20,36 @@ namespace DoctorFlow.Controllers.UserControllers
         public ActionResult Details()
         {
             if (Session == null) return RedirectToAction("index", "Home");
-            int userId = int.Parse(Session["USERID"].ToString());
+            
+            var userId = int.Parse(s: Session["USERID"].ToString());
 
-            UserRepository userAccount = new UserRepository();
-            User user = userAccount.getUser(userId);
+            var userAccount = new UserRepository();
+            var user = userAccount.getUser(userId);
 
             Mapper.CreateMap<User, UserProfileModel>();
-            UserProfileModel eUser = Mapper.Map<User, UserProfileModel>(user);
+            var eUser = Mapper.Map<User, UserProfileModel>(user);
 
             return View(eUser);
         }
         
 
-        public ActionResult Edit(string user)
+        public ActionResult Edit()
         {
-            int userId = int.Parse(Session["USERID"].ToString());
+            if (Session == null)
+            {
+                ViewBag.Errors = new[]
+                    {
+                        "•Ha ocurrido un error! Por Favor vuelve a ingresar."
+                    };
+                return View();
+            }
+            var userId = int.Parse(Session["USERID"].ToString());
             
-            UserRepository userAccount = new UserRepository();
-            User editUser = userAccount.getUser(userId);
+            var userAccount = new UserRepository();
+            var editUser = userAccount.getUser(userId);
 
             Mapper.CreateMap<User, UserProfileModel>();
-            UserProfileModel eUser = Mapper.Map<User, UserProfileModel>(editUser);
+            var eUser = Mapper.Map<User, UserProfileModel>(editUser);
 
             return View(eUser);
         }
@@ -48,7 +57,7 @@ namespace DoctorFlow.Controllers.UserControllers
         [HttpPost]
         public ActionResult Edit(UserProfileModel registerModel)
         {
-            var validImageTypes = new string[]
+            var validImageTypes = new[]
             {
                 "image/gif",
                 "image/jpeg",
@@ -56,79 +65,48 @@ namespace DoctorFlow.Controllers.UserControllers
                 "image/png"
             };
 
-            if (registerModel.UpladPhoto != null && registerModel.UpladPhoto.ContentLength > 0)
+            if (registerModel.UpladPhoto != null && registerModel.UpladPhoto.ContentLength > 0 
+                && !validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
             {
-                //ModelState.AddModelError("UpladPhoto", "This field is required");
-                if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
-                {
-                    ModelState.AddModelError("UpladPhoto", "Por favr seleccione entre una imagen GIF, JPG o PNG");
-                }
+                ModelState.AddModelError("UpladPhoto", "Por favor seleccione una imagen de tipo GIF, JPG o PNG");
             }
-            //else if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
-            //{
-            //    ModelState.AddModelError("UpladPhoto", "Please choose either a GIF, JPG or PNG image.");
-            //}
-
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) return View(registerModel);
+            try
             {
-                try
+                byte[] fileBytes = null;
+                if (registerModel.UpladPhoto != null)
                 {
-                    //byte[] fileBytes = new byte[registerModel.UpladPhoto.ContentLength];
-
-                    byte[] fileBytes = null;
-                    if (registerModel.UpladPhoto != null)
+                    using (var binaryReader = new BinaryReader(registerModel.UpladPhoto.InputStream))
                     {
-                        using (var binaryReader = new BinaryReader(registerModel.UpladPhoto.InputStream))
-                        {
-                            fileBytes = binaryReader.ReadBytes(registerModel.UpladPhoto.ContentLength);
-                        }
+                        fileBytes = binaryReader.ReadBytes(registerModel.UpladPhoto.ContentLength);
                     }
-
-                    var userId = int.Parse(Session["USERID"].ToString());
-                    registerModel.Id = userId;
-                    registerModel.UpladPhoto = null;
-
-                    Mapper.CreateMap<User, UserProfileModel>().ReverseMap();
-                    var editUser = Mapper.Map<UserProfileModel, User>(registerModel);
-
-                    if(fileBytes != null)
-                        editUser.Photo = fileBytes;
-
-                    _userRepositry = new UserRepository();
-                    _userRepositry.EditUser(editUser);
-
-                    return RedirectToAction("Details", "Profile");
                 }
-                catch
-                {
-                    return View(registerModel);
-                }
+
+                var userId = int.Parse(Session["USERID"].ToString());
+                registerModel.Id = userId;
+                registerModel.UpladPhoto = null;
+
+                Mapper.CreateMap<User, UserProfileModel>().ReverseMap();
+                var editUser = Mapper.Map<UserProfileModel, User>(registerModel);
+
+                if(fileBytes != null)
+                    editUser.Photo = fileBytes;
+
+                _userRepositry = new UserRepository();
+                _userRepositry.EditUser(editUser);
+
+                return RedirectToAction("Details", "Profile");
             }
-            return View(registerModel);
+            catch
+            {
+                ViewBag.Errors = new[]
+                    {
+                        "•Ha ocurrido un error inesperado al intentar subir la imagen!"
+                    };
+                return View(registerModel);
+            }
         }
 
-        //
-        // GET: /Profile/Delete/5
-        //public ActionResult Delete(int id)
-        //{
-        //    return View();
-        //}
-
-        ////
-        //// POST: /Profile/Delete/5
-        //[HttpPost]
-        //public ActionResult Delete(int id)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add delete logic here
-
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+        //TODO: Add delete logic here
     }
 }

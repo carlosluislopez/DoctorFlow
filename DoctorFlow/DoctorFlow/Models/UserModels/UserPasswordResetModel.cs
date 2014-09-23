@@ -9,19 +9,19 @@ namespace DoctorFlow.Models.UserModels
 {
     public class UserPasswordResetModel
     {
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Clave")]
         public string PassKey { set; get; }
         [EmailAddress]
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
         [DataType(DataType.Password)]
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Nueva Contraseña")]
         public string NewPassword { set; get; }
         [DataType(DataType.Password)]
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Confirmar Contraseña")]    
         public string ConfirmNewPassword { set; get; }
     }

@@ -27,12 +27,17 @@ namespace DoctorFlow.Controllers.UserControllers
         {
             return View();
         }
+        public ActionResult Error()
+        {
+            return View();
+        }
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Create(UserRegisterModel registerModel)
         {
             if (ModelState.IsValid)
             {
+                ViewBag.Errors = null;
                 var user = _userRepositry.getUser(registerModel.Email);
                 if (user != null)
                 {
@@ -41,14 +46,17 @@ namespace DoctorFlow.Controllers.UserControllers
                     {
                         "•El correo que ingreso ya existe"
                     };
-                    return View(registerModel);
+                    return View();
                 }
-
                 user = _userRepositry.getUser(registerModel.UserName);
                 if (user != null)
                 {
                     registerModel.UserName = "";
-                    return View(registerModel);
+                    ViewBag.Errors = new[]
+                    {
+                        "•El nombre de usuario que ingreso ya existe"
+                    };
+                    return View();
                 }
 
                 Mapper.CreateMap<User, UserRegisterModel>().ReverseMap();

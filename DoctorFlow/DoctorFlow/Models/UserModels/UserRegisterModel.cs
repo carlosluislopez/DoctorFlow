@@ -8,18 +8,20 @@ namespace DoctorFlow.Models
 {
     public class UserRegisterModel
     {
-        [Display(Name = "Nombre de Usuario"),Required,StringLength(100,ErrorMessage = "No debe estar vacio.",MinimumLength = 1)]
+        [Required(ErrorMessage = "Este campo es requerido!")]
+        [Display(Name = "Nombre de Usuario")]
+        [StringLength(100,ErrorMessage = "No ser menor a {2} caracteres.",MinimumLength = 6)]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Nombre")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Apellido")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [StringLength(100, ErrorMessage = "La contraseña deberia tener al menos {2} caracteres.", MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
@@ -30,7 +32,7 @@ namespace DoctorFlow.Models
         [Compare("Password", ErrorMessage = "La confirmación y la contraseña no coinciden.")]
         public string ConfirmPassword { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]
         public string Email { get; set; }

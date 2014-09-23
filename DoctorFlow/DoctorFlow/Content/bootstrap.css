@@ -383,7 +383,11 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-
+.img-details {
+        max-width: 200px;
+        max-height: 300px;
+    height: auto;
+}
 hr {
   margin-top: 20px;
   margin-bottom: 20px;

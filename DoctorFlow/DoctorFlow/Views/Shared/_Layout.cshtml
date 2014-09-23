@@ -48,6 +48,16 @@
         </div>
 
         <div class="container body-content">
+            @if (ViewBag.Errors != null)
+            {
+                foreach (string error in ViewBag.Errors)
+                {
+                    <p class="page-error">
+                        @Html.Label(error)
+                        <br />
+                    </p>
+                }
+            }
             @RenderBody()
         </div>
 

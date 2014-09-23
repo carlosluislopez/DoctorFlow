@@ -25,21 +25,29 @@ namespace DoctorFlow.Controllers.UserControllers
         [HttpPost]
         public ActionResult Create(UserLoginModel loginModel)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var userAccount = new UserRepository();
-                var user = userAccount.Login(loginModel.EmailOrUserName, loginModel.Password);
-
-
-                if (user == null)
-                {
-                    return View(loginModel);
-                }
-                Session.Add("USERNAME", user.Name);
-                Session.Add("USERID", user.Id);
-                return RedirectToAction("Details", "Profile");
+                ViewBag.Errors = new[]
+                    {
+                        "•Algunos campos no son validos!"
+                    };
+                return View(loginModel);
             }
-            return View(loginModel);
+            var userAccount = new UserRepository();
+            var user = userAccount.Login(loginModel.EmailOrUserName, loginModel.Password);
+
+
+            if (user == null)
+            {
+                ViewBag.Errors = new[]
+                {
+                    "•Ha ocurrido un error inesperado al intentar subir la imagen!"
+                };
+                return View(loginModel);
+            }
+            Session.Add("USERNAME", user.Name);
+            Session.Add("USERID", user.Id);
+            return RedirectToAction("Details", "Profile");
         }
         public ActionResult Logout()
         {

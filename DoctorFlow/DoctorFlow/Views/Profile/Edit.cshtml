@@ -13,15 +13,14 @@ $( "#datepicker" ).datepicker();
     ViewBag.Title = "Edit User";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Edit</h2>
+>Editar</h2>
 
 @using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>UserProfileModel</h4>
+        <h4>Perfil del Usuario</h4>
         <hr />
         @Html.ValidationSummary(true)
         @{
