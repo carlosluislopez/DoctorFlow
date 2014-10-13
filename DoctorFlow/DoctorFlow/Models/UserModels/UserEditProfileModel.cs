@@ -8,19 +8,19 @@ namespace DoctorFlow.Models.UserModels
 {
     public class UserEditProfileModel
     {
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Nombre de Usuario")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Nombre")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Apellido")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Correo electrónico")]
         public string Email { get; set; }
 

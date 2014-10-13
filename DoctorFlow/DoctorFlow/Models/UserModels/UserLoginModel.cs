@@ -8,11 +8,11 @@ namespace DoctorFlow.Models
 {
     public class UserLoginModel
     {
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = " Correo/Usuario")]
         public string EmailOrUserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido!")]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
 
