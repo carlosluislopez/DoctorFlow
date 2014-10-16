@@ -10,8 +10,6 @@ namespace DoctorFlow.Models.UserModels
 {
     public class UserPasswordRecoveryModel
     {
-        [EmailAddress]
-        [Required(ErrorMessage = "Este campo es requerido!")]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
     }

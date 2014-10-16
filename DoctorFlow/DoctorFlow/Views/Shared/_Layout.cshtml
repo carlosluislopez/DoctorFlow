@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Doctor Flow</title>
-    <style type="text/css">.img-center {display: block; margin-left: auto ; margin-right: auto }</style>
+    <style type="text/css">.img-center {display: block; margin-left: auto ; margin-right: auto }
+
+ 
+    </style>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script type="text/javascript">
@@ -52,11 +55,18 @@
             {
                 foreach (string error in ViewBag.Errors)
                 {
-                    <p class="page-error">
-                        @Html.Label(error)
+                    <div class="alert alert-danger" role="alert">
+                        @Html.Raw(error)
                         <br />
-                    </p>
+                    </div>
                 }
+            }
+            @if (ViewBag.SuccessAlert != null)
+            {
+              <div class="alert alert-success" role="alert">
+                        @Html.Raw(ViewBag.SuccessAlert)
+                        <br />
+                    </div>
             }
             @RenderBody()
         </div>

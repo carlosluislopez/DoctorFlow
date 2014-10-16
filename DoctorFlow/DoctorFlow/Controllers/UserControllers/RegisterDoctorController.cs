@@ -42,6 +42,10 @@ namespace DoctorFlow.Controllers.UserControllers
                 if (user != null)
                 {
                     registerModel.Email = "";
+                    ViewBag.Errors = new[]
+                    {
+                        "•El correo que ingreso ya existe."
+                    };
                     return View(registerModel);
                 }
 
@@ -49,6 +53,10 @@ namespace DoctorFlow.Controllers.UserControllers
                 if (user != null)
                 {
                     registerModel.UserName = "";
+                    ViewBag.Errors = new[]
+                    {
+                        "•El nombre de usuario que ingreso ya existe."
+                    };
                     return View(registerModel);
                 }
 
@@ -76,7 +84,7 @@ namespace DoctorFlow.Controllers.UserControllers
                     string message = string.Format(@"Visite el siguiente enlace: {0}?ActivateCode={1} para activar su cuenta.", link, generatePassword);
                     SendSimpleMessage(newUser.Email, message);
                 }
-
+                TempData["RegisterSuccess"] = "Se ha creado tu cuenta satisfactoriamente, revisa tu correo para poder activarla!";
                 return RedirectToAction("Create", "Login");
             }
             return View(registerModel);

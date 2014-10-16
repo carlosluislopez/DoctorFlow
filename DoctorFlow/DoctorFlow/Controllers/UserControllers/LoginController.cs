@@ -20,6 +20,7 @@ namespace DoctorFlow.Controllers.UserControllers
         }
         public ActionResult Create()
         {
+            ViewBag.SuccessAlert = TempData["RegisterSuccess"];
             return View();
         }
         [HttpPost]
@@ -30,9 +31,12 @@ namespace DoctorFlow.Controllers.UserControllers
                 var userAccount = new UserRepository();
                 var user = userAccount.Login(loginModel.EmailOrUserName, loginModel.Password);
 
-
                 if (user == null)
                 {
+                    ViewBag.Errors = new[]
+                    {
+                        "•Esta combinacion de Nombre/Correo y Contraseña no existe, verifique ambos e intente de nuevo."
+                    };
                     return View(loginModel);
                 }
                 Session.Add("USERNAME", user.Name);

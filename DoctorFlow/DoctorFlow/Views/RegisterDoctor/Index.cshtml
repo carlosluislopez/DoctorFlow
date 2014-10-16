@@ -4,97 +4,158 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+<script>
+    function looksLikeMail(str) {
+        var lastAtPos = str.lastIndexOf('@@');
+        var lastDotPos = str.lastIndexOf('.');
+        return (lastAtPos < lastDotPos && lastAtPos > 0 && str.indexOf('@@@@') == -1 && lastDotPos > 2 && (str.length - lastDotPos) > 2);
+    }
+    function validateForm() {
+        var username = document.forms["register_form"]["UserName"].value;
+        var name = document.forms["register_form"]["Name"].value;
+        var lastName = document.forms["register_form"]["LastName"].value;
+        var password = document.forms["register_form"]["Password"].value;
+        var confirmPassword = document.forms["register_form"]["ConfirmPassword"].value;
+        var email = document.forms["register_form"]["Email"].value;
+        var specialty = document.forms["register_form"]["Specialty"].value;
+        var medicalLicenseNumber = document.forms["register_form"]["MedicalLicenseNumber"].value;
+        if (username == null || username == "") {
+            alert("El Nombre de Usuario es requerido.");
+            return false;
+        }
+        if (username.length < 6) {
+            alert("El nombre de usuario debe ser mayor a 6 caracteres.");
+            return false;
+        }
+        else if (name == null || name == "") {
+            alert("Su Nombre es requerido.");
+            return false;
+        }
+        else if (lastName == null || lastName == "") {
+            alert("Su Apellido es requerido.");
+            return false;
+        }
+        else if (password == null || password == "") {
+            alert("La Contraseña es requerida.");
+            return false;
+        }
+        else if (password.length < 8) {
+            alert("La Contraseña debe de ser mayor a 8 caracteres.");
+            return false;
+        }
+        else if (confirmPassword != password) {
+            alert("La Contraseña no coincide con la confirmación de la misma.");
+            return false;
+        }
+        else if (email == null || email == "") {
+            alert("El correo electrónico es requerido.");
+            return false;
+        }
+        else if (!looksLikeMail(email)) {
+            alert("Este correo electrónico no es valido.");
+            return false;
+        }
+        else if (specialty == null || specialty == "") {
+            alert("La especialidad es un campo requerido");
+            return false;
+        }
+        else if (medicalLicenseNumber == null || medicalLicenseNumber == "") {
+            alert("Su numero de registro del colegio medico es requerido");
+            return false;
+        }
+        else if (isNaN(medicalLicenseNumber)) {
+            alert("El numero de registro del colegio medico debe ser un valor numerico.");
+            return false;
+        }
+        else if (medicalLicenseNumber.length != 5) {
+            alert("El numero de registro del colegio medico debe contener exactamente 5 numeros.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+<form action="/RegisterDoctor" method="post" name="register_form" onsubmit="return validateForm()">
     <div class="col-md-5 pull-right col-md-offset-3 ">
     </div>
     <div>
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h1 class="panel-title" >Registrarse como Medico</h1>
+                <h1 class="panel-title">Registrarse como Medico</h1>
             </div>
             <div class="panel-body">
                 <div>
                     <div class="form-horizontal">
                         <hr />
-                        @Html.ValidationSummary(true)
                         <div class="form-group">
                             <div class="register-item">
-                                @Html.LabelFor(model => model.UserName)
+                                <label for="UserName">Nombre de Usuario</label>
                             </div>
                             <div class="register-item">
-                                @Html.EditorFor(model => model.UserName)<br/>
-                                @Html.ValidationMessageFor(model => model.UserName)
+                                <input class="text-box single-line" id="UserName" name="UserName" type="text" value="" /><br />
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="register-item">
-                                @Html.LabelFor(model => model.Name)
+                                <label for="Name">Nombre</label>
                             </div>
                             <div class="register-item">
-                                @Html.EditorFor(model => model.Name)<br/>
-                                @Html.ValidationMessageFor(model => model.Name)
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="register-item">
-                                @Html.LabelFor(model => model.LastName)
-                            </div>
-                            <div class="register-item">
-                                @Html.EditorFor(model => model.LastName)<br/>
-                                @Html.ValidationMessageFor(model => model.LastName)
+                                <input class="text-box single-line" id="Name" name="Name" type="text" value="" /><br />
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="register-item">
-                                @Html.LabelFor(model => model.Password)
+                                <label for="LastName">Apellido</label>
                             </div>
                             <div class="register-item">
-                                @Html.EditorFor(model => model.Password)<br/>
-                                @Html.ValidationMessageFor(model => model.Password)
+                                <input class="text-box single-line" id="LastName" name="LastName" type="text" value="" /><br />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="register-item">
+                                <label for="Password">Contrase&#241;a</label>
+                            </div>
+                            <div class="register-item">
+                                <input class="text-box single-line password" id="Password" name="Password" type="password" value="" /><br />
 
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="register-item">
-                                @Html.LabelFor(model => model.ConfirmPassword)
+                                <label for="ConfirmPassword">Confirmar la Contrase&#241;a</label>
                             </div>
                             <div class="register-item">
-                                @Html.EditorFor(model => model.ConfirmPassword)<br/>
-                                @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                                <input class="text-box single-line password" id="ConfirmPassword" name="ConfirmPassword" type="password" value="" /><br />
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="register-item">
-                                @Html.LabelFor(model => model.Email)
+                                <label for="Email">Correo electr&#243;nico</label>
                             </div>
                             <div class="register-item">
-                                @Html.EditorFor(model => model.Email)<br/>
-                                @Html.ValidationMessageFor(model => model.Email)
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="register-item">
-                                @Html.LabelFor(model => model.Specialty)
-                            </div>
-                            <div class="register-item">
-                                @Html.EditorFor(model => model.Specialty)<br/>
-                                @Html.ValidationMessageFor(model => model.Specialty)
+                                <input class="text-box single-line" id="Email" name="Email" type="text" value="" /><br />
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="register-item">
-                                @Html.LabelFor(model => model.MedicalLicenseNumber)
+                                <label for="Specialty">Especialidad</label>
                             </div>
                             <div class="register-item">
-                                @Html.TextBoxFor(model => model.MedicalLicenseNumber)<br/>
-                                @Html.ValidationMessageFor(model => model.MedicalLicenseNumber)
+                                <input class="text-box single-line" data-val="true" data-val-required="Este campo es requerido!" id="Specialty" name="Specialty" type="text" value="" /><br />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="register-item">
+                                <label for="MedicalLicenseNumber">N&#250;mero de colegiatura</label>
+                            </div>
+                            <div class="register-item">
+                                <input data-val="true" data-val-number="The field Número de colegiatura must be a number." data-val-required="Este campo es requerido!" id="MedicalLicenseNumber" name="MedicalLicenseNumber" type="text" value="" /><br />
                             </div>
                         </div>
                     </div>
@@ -109,4 +170,4 @@
             </div>
         </div>
     </div>
-}
+</form>

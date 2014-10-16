@@ -4,98 +4,145 @@
     ViewBag.Title = "Register User";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+    function looksLikeMail(str) {
+        var lastAtPos = str.lastIndexOf('@@');
+        var lastDotPos = str.lastIndexOf('.');
+        return (lastAtPos < lastDotPos && lastAtPos > 0 && str.indexOf('@@@@') == -1 && lastDotPos > 2 && (str.length - lastDotPos) > 2);
+    }
+    function validateForm() {
+        var username = document.forms["register_form"]["UserName"].value;
+        var name = document.forms["register_form"]["Name"].value;
+        var lastName = document.forms["register_form"]["LastName"].value;
+        var password = document.forms["register_form"]["Password"].value;
+        var confirmPassword = document.forms["register_form"]["ConfirmPassword"].value;
+        var email = document.forms["register_form"]["Email"].value;
+        if (username == null || username == "") {
+            alert("El Nombre de Usuario es requerido.");
+            return false;
+        }
+        if (username.length < 6) {
+            alert("El nombre de usuario debe ser mayor a 6 caracteres.");
+            return false;
+        }
+        else if (name == null || name == "") {
+            alert("Su Nombre es requerido.");
+            return false;
+        }
+        else if (lastName == null || lastName == "") {
+            alert("Su Apellido es requerido.");
+            return false;
+        }
+        else if (password == null || password == "") {
+            alert("La Contraseña es requerida.");
+            return false;
+        }
+        else if (password.length < 8) {
+            alert("La Contraseña debe de ser mayor a 8 caracteres.");
+            return false;
+        }
+        else if (confirmPassword != password) {
+            alert("La Contraseña no coincide con la confirmación de la misma.");
+            return false;
+        }
+        else if (email == null || email == "") {
+            alert("El correo electrónico es requerido.");
+            return false;
+        }
+        else if (!looksLikeMail(email)) {
+            alert("Este correo electrónico no es valido.");
+            return false;
+        }
+        return true;
+    }
+</script>
 
+   <form action="/Register/Create" method="post" onsubmit="return validateForm()" name="register_form">
+    <div class="col-md-5   pull-right col-md-offset-3 ">
+    </div>
+    <div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Registrarse como Usuario</h3>
+            </div>
+            <div class="panel-body">
+                <div>
+                    <div class="form-horizontal">
+                        <hr />
 
-       
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div class="col-md-5   pull-right col-md-offset-3 ">
-        </div>
-        <div>
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Registrarse como Usuario</h3>
-                </div>
-                <div class="panel-body">
-                    <div>
-                        <div class="form-horizontal">
-                            <hr />
-                            @Html.ValidationSummary(true)
-                            <div class="form-group">
-                                <div class="register-item">
-                                    @Html.LabelFor(model => model.UserName)
-                                </div>
-                                <div class="register-item">
-
-                                    @Html.EditorFor(model => model.UserName)<br />
-                                    @Html.ValidationMessageFor(model => model.UserName)
-                                </div>
+                        <div class="form-group">
+                            <div class="register-item">
+                                <label for="UserName">Nombre de Usuario</label>
                             </div>
+                            <div class="register-item">
 
-                            <div class="form-group">
-                                <div class="register-item">
-                                    @Html.LabelFor(model => model.Name)
-                                </div>
-                                <div class="register-item">
-                                    @Html.EditorFor(model => model.Name)<br />
-                                    @Html.ValidationMessageFor(model => model.Name)
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="register-item">
-                                    @Html.LabelFor(model => model.LastName)
-                                </div>
-                                <div class="register-item">
-                                    @Html.EditorFor(model => model.LastName)<br />
-                                    @Html.ValidationMessageFor(model => model.LastName)
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="register-item">
-                                    @Html.LabelFor(model => model.Password)
-                                </div>
-                                <div class="register-item">
-                                    @Html.EditorFor(model => model.Password)<br />
-                                    @Html.ValidationMessageFor(model => model.Password)
-
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="register-item">
-                                    @Html.LabelFor(model => model.ConfirmPassword)
-                                </div>
-                                <div class="register-item">
-                                    @Html.EditorFor(model => model.ConfirmPassword)<br />
-                                    @Html.ValidationMessageFor(model => model.ConfirmPassword)
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="register-item">
-                                    @Html.LabelFor(model => model.Email)
-                                </div>
-                                <div class="register-item">
-                                    @Html.EditorFor(model => model.Email)<br />
-                                    @Html.ValidationMessageFor(model => model.Email)
-                                </div>
+                                <input class="text-box single-line" data-val="true" data-val-length="No debe estar vacio." data-val-length-max="100" data-val-length-min="1" data-val-required="The Nombre de Usuario field is required." id="UserName" name="UserName" type="text" value="" /><br />
+                                <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="register-item">
-                                <input type="submit" value="Registrarse" class="btn btn-primary" />
+                                <label for="Name">Nombre</label>
+                            </div>
+                            <div class="register-item">
+                                <input class="text-box single-line" data-val="true" data-val-required="The Nombre field is required." id="Name" name="Name" type="text" value="" /><br />
+                                <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="register-item">
+                                <label for="LastName">Apellido</label>
+                            </div>
+                            <div class="register-item">
+                                <input class="text-box single-line" data-val="true" data-val-required="The Apellido field is required." id="LastName" name="LastName" type="text" value="" /><br />
+                                <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="register-item">
+                                <label for="Password">Contrase&#241;a</label>
+                            </div>
+                            <div class="register-item">
+                                <input class="text-box single-line password" data-val="true" data-val-length="La contraseña deberia tener al menos 8 caracteres." data-val-length-max="100" data-val-length-min="8" data-val-required="The Contraseña field is required." id="Password" name="Password" type="password" value="" /><br />
+                                <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="register-item">
+                                <label for="ConfirmPassword">Confirmar la Contrase&#241;a</label>
+                            </div>
+                            <div class="register-item">
+                                <input class="text-box single-line password" data-val="true" data-val-equalto="&#39;Confirmar la Contraseña&#39; and &#39;Contraseña&#39; do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password" value="" /><br />
+                                <span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="register-item">
+                                <label for="Email">Correo electr&#243;nico</label>
+                            </div>
+                            <div class="register-item">
+                                <input class="text-box single-line" id="Email" name="Email" type="text" value="" /><br />
+                                
                             </div>
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <div class="register-item">
+                            <input type="submit" value="Registrarse" class="btn btn-primary" />
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-
-    }
-
+    </div>
+</form>    
+   
 
