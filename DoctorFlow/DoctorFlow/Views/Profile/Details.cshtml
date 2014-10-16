@@ -1,139 +1,167 @@
-﻿
-<style type="text/css">
-    #ProfilePage {
-        /* Move it off the top of the page, then centre it horizontally */
-        margin: 50px auto;
-        width: 700px;
-        /* For visibility. Delete me */
-        border: 5px solid blue;
-    }
-
-    #LeftCol {
-        /* Move it to the left */
-        float: left;
-        width: 200px;
-        text-align: center;
-        /* Move it away from the content */
-        margin-right: 20px;
-        margin-left: 20px;
-        /* For visibility. Delete me */
-       /* border: 1px solid blue;*/
-    }
-
-    #Photo {
-        /* Width and height of photo container */
-        width: 200px;
-        height: 200px;
-        align-content: center;
-        margin-top: 50px;
-        margin-left: 50px;
-        /* For visibility. Delete me */
-        /*border: 1px solid blue;*/
-    }
-
-    #PhotoOptions {
-        text-align: center;
-        width: 200px;
-        /* For visibility. Delete me */
-        /*border: 1px solid blue;*/
-    }
-
-    #Info {
-        width: 400px;
-        text-align: left;
-        /* Move it to the right */
-        float: right;
-        margin-top: 15px;
-        /* For visibility. Delete me */
-        /* border: 1px solid blue;*/
-    }
-
-        #Info strong {
-            /* Give it a width */
-            display: inline-block;
-            width: 100px;
-            /* For visibility. Delete me */
-           /* border: 1px solid blue;*/
-        }
-
-        #Info span {
-            /* Give it a width */
-            display: inline-block;
-            width: 250px;
-            /* For visibility. Delete me */
-            /*border: 1px solid blue;*/
-        }
-        
-</style>
-
-@model DoctorFlow.Models.UserProfileModel
+﻿@model DoctorFlow.Models.UserProfileModel
 @{
     ViewBag.Title = "Detail User";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<p class=" text-info">
+    <script language="javascript">
 
-<div id="ProfilePage">
-    <div id="LeftCol">
-        <div id="Photo">
-            @{
-                var imgSrc = "";
-                if(Model.Photo != null)
-                {
-                    var base64 = Convert.ToBase64String(Model.Photo);
-                    imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
-                }
-            }
-                <img class="img-details" src="@imgSrc" alt="tio1.jpg" />
-        </div>
-        <div id="ProfileOptions">
-        </div>
-    </div>
-
-    <div id="Info">
-        <p >
-            @Html.LabelFor(model => model.UserName):  @Html.DisplayFor(model => model.UserName)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.Name):  @Html.DisplayFor(model => model.Name)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.LastName):  @Html.DisplayFor(model => model.LastName)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.Email):  @Html.DisplayFor(model => model.Email)  
-        </p>
-        <p>
-            @Html.LabelFor(model => model.BirthDate):  @Html.DisplayFor(model => model.BirthDate) 
-        </p>
-        <p>
-            @Html.LabelFor(model => model.SocialSecurityNumber):  @Html.DisplayFor(model => model.SocialSecurityNumber)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.Phone):  @Html.DisplayFor(model => model.Phone)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.MaritalStatus):  @Html.DisplayFor(model => model.MaritalStatus)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.Height):  @Html.DisplayFor(model => model.Height)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.BloodType):  @Html.DisplayFor(model => model.BloodType)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.Allergy):  @Html.DisplayFor(model => model.Allergy)
-        </p>
-        <p>
-            @Html.LabelFor(model => model.Address): @Html.DisplayFor(model => model.Address)
-        </p>
-    </div>
-
-    <!-- Needed because other elements inside ProfilePage have floats -->
-    <div style="clear:both"></div>
-</div>
-
-<p>
-    @Html.ActionLink("Editar", "Edit", "Profile") |
-    @Html.ActionLink("Deshabilitar", "Disable", "Register") |
-    @Html.ActionLink("Inicio", "Index", "Home")
+<!--
+        today = new Date();
+        document.write("<BR>Hora : ", today.getHours(),":",today.getMinutes());
+        document.write("<BR>Fecha: ", today.getDate(),"/",today.getMonth()+1,"/",today.getYear());
+//-->
+    </script>
 </p>
+<div class="container" >
+    <div class="row" >
+        <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+            
+            <br>
+            
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+            <div class="panel panel-info" >
+                <div class="panel-heading" style="background-color: #81BEF7">
+                    <h3 class="panel-title" >
+                       
+                        
+                            <b style="color: azure">
+                                @Html.DisplayFor(model => model.UserName)  @Html.DisplayFor(model => model.LastName)
+                            </b>
+                       
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center"> <div id="Photo">
+    @{
+        var imgSrc = "";
+        if (Model.Photo != null)
+        {
+            var base64 = Convert.ToBase64String(Model.Photo);
+            imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
+            <img  src="@imgSrc" class="img-circle" width="125" height="125"/>
+        }
+        else
+        {
+            <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle">
+        }
+    }
+    
+</div>
+ </div>
+
+                        <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                                <dl>
+                                    <dt>DEPARTMENT:</dt>
+                                    <dd>Administrator</dd>
+                                    <dt>HIRE DATE</dt>
+                                    <dd>11/12/2013</dd>
+                                    <dt>DATE OF BIRTH</dt>
+                                    <dd>11/12/2013</dd>
+                                    <dt>GENDER</dt>
+                                    <dd>Male</dd>
+                                </dl>
+                            </div>-->
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.Name):</td>
+                                        <td>@Html.DisplayFor(model => model.Name)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.LastName):  </td>
+                                        <td>@Html.DisplayFor(model => model.LastName)
+</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.Email):</td>
+                                        <td>@Html.DisplayFor(model => model.Email)
+</td>
+                                    </tr>
+
+                                    <tr>
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.BirthDate):  </td>
+                                            <td>@Html.DisplayFor(model => model.BirthDate)
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.SocialSecurityNumber):  </td>
+                                            <td>@Html.DisplayFor(model => model.SocialSecurityNumber)
+</td>
+                                        </tr>
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.Phone):  </td>
+                                        <td>@Html.DisplayFor(model => model.Phone)
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.MaritalStatus):    </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.MaritalStatus)
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.Height):      </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Height)
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.BloodType):        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.BloodType)
+
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.Allergy):         </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Allergy)
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>@Html.LabelFor(model => model.Address):          </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.Address)
+
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                       
+                                    </tr>
+                                    
+
+                                    
+
+                                </tbody>
+                            </table>
+
+                            <p style="font-size: 125%" align="right">
+                                @Html.ActionLink("Editar", "Edit", "Profile") |
+                                @Html.ActionLink("Deshabilitar", "Disable", "Register") |
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
