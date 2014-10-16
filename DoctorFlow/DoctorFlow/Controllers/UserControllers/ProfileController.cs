@@ -16,46 +16,35 @@ namespace DoctorFlow.Controllers.UserControllers
     public class ProfileController : Controller
     {
         private IUserRepository _userRepositry;
-        //
-        // GET: /Profile/
-        public ActionResult Index()
-        {
 
-            return View();
-        }
-
-        //
-        // GET: /Profile/Details/5
         public ActionResult Details()
         {
-            var userId = int.Parse(Session["USERID"].ToString());
+            if (Session == null) return RedirectToAction("index", "Home");
+            int userId = int.Parse(Session["USERID"].ToString());
 
-            var userAccount = new UserRepository();
-            var user = userAccount.getUser(userId);
-
-            return View(user);
-        }
-        
-        //
-        // GET: /Profile/Edit/5
-        public ActionResult Edit(string user)
-        {
-            var userId = int.Parse(Session["USERID"].ToString());
-            
-            var userAccount = new UserRepository();
-            var editUser = userAccount.getUser(userId);
+            UserRepository userAccount = new UserRepository();
+            User user = userAccount.getUser(userId);
 
             Mapper.CreateMap<User, UserProfileModel>();
-            var eUser = Mapper.Map<User, UserProfileModel>(editUser);
-            //eUser.Status = true;
-            //eUser.RegisterDate = DateTime.Now;
-            //eUser.PasswordFlag = DateTime.Now.AddDays(-1);
+            UserProfileModel eUser = Mapper.Map<User, UserProfileModel>(user);
+
+            return View(eUser);
+        }
+        
+
+        public ActionResult Edit(string user)
+        {
+            int userId = int.Parse(Session["USERID"].ToString());
+            
+            UserRepository userAccount = new UserRepository();
+            User editUser = userAccount.getUser(userId);
+
+            Mapper.CreateMap<User, UserProfileModel>();
+            UserProfileModel eUser = Mapper.Map<User, UserProfileModel>(editUser);
 
             return View(eUser);
         }
 
-        //
-        // POST: /Profile/Edit/5
         [HttpPost]
         public ActionResult Edit(UserProfileModel registerModel)
         {
@@ -67,14 +56,18 @@ namespace DoctorFlow.Controllers.UserControllers
                 "image/png"
             };
 
-            if (registerModel.UpladPhoto == null || registerModel.UpladPhoto.ContentLength == 0)
+            if (registerModel.UpladPhoto != null && registerModel.UpladPhoto.ContentLength > 0)
             {
-                ModelState.AddModelError("UpladPhoto", "This field is required");
+                //ModelState.AddModelError("UpladPhoto", "This field is required");
+                if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
+                {
+                    ModelState.AddModelError("UpladPhoto", "Por favr seleccione entre una imagen GIF, JPG o PNG");
+                }
             }
-            else if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
-            {
-                ModelState.AddModelError("UpladPhoto", "Please choose either a GIF, JPG or PNG image.");
-            }
+            //else if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
+            //{
+            //    ModelState.AddModelError("UpladPhoto", "Please choose either a GIF, JPG or PNG image.");
+            //}
 
             if (ModelState.IsValid)
             {
@@ -83,9 +76,12 @@ namespace DoctorFlow.Controllers.UserControllers
                     //byte[] fileBytes = new byte[registerModel.UpladPhoto.ContentLength];
 
                     byte[] fileBytes = null;
-                    using (var binaryReader = new BinaryReader(registerModel.UpladPhoto.InputStream))
+                    if (registerModel.UpladPhoto != null)
                     {
-                        fileBytes = binaryReader.ReadBytes(registerModel.UpladPhoto.ContentLength);
+                        using (var binaryReader = new BinaryReader(registerModel.UpladPhoto.InputStream))
+                        {
+                            fileBytes = binaryReader.ReadBytes(registerModel.UpladPhoto.ContentLength);
+                        }
                     }
 
                     var userId = int.Parse(Session["USERID"].ToString());
@@ -95,7 +91,8 @@ namespace DoctorFlow.Controllers.UserControllers
                     Mapper.CreateMap<User, UserProfileModel>().ReverseMap();
                     var editUser = Mapper.Map<UserProfileModel, User>(registerModel);
 
-                    editUser.Photo = fileBytes;
+                    if(fileBytes != null)
+                        editUser.Photo = fileBytes;
 
                     _userRepositry = new UserRepository();
                     _userRepositry.EditUser(editUser);

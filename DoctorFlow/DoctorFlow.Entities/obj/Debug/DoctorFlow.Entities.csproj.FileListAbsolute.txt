@@ -40,6 +40,28 @@ C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\Do
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.InitialCreate.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.RemoveIDRol.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Test.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.FlaDatetime.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddUserFields.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddUserPhotoField.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor2.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor21.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.Doctor3.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.Migrations.AddActivateCode.resources
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.csproj.GenerateResource.Cache
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow.Entities\obj\Debug\DoctorFlow.Entities.pdb
 C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll.config
 C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.dll
 C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow.Entities\bin\Debug\DoctorFlow.Entities.pdb

@@ -8,11 +8,9 @@ namespace DoctorFlow.Models
 {
     public class UserLoginModel
     {
-        [Required]
         [Display(Name = " Correo/Usuario")]
         public string EmailOrUserName { get; set; }
 
-        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
 

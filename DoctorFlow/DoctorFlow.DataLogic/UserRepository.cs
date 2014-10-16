@@ -138,7 +138,9 @@ namespace DoctorFlow.DataLogic
                 user.Email = EditUser.Email;
                 user.Height = EditUser.Height;
                 user.MaritalStatus = EditUser.MaritalStatus;
-                user.Photo = EditUser.Photo;
+                user.Allergy = EditUser.Allergy;
+                if(EditUser.Photo != null)
+                    user.Photo = EditUser.Photo;
                 try
                 {
                     db.SaveChanges();
@@ -216,6 +218,25 @@ namespace DoctorFlow.DataLogic
             }
             return null;
         }
+        public User getUser(string userNameEmail) 
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                try
+                {
+                    var users = from user in db.Users
+                                where user.UserName.Equals(userNameEmail)
+                                      || user.Email.Equals(userNameEmail)
+                                select user;
+
+                    if (users.Any())
+                        return users.First();
+                }
+                catch (Exception ex) { }
+            }
+            return null;
+        }
+
         public bool ActivateUser(string userNameEmail, string password, string activateCode)
         {
             using (var db = new DoctorFlowContext())

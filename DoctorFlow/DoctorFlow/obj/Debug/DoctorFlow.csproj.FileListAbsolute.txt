@@ -76,6 +76,45 @@ C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow\bin\Antlr3.Runtime.pd
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.csprojResolveAssemblyReference.cache
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.dll
 C:\Users\kingdomkaz\Music\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.pdb
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\AutoMapper.Net4.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll.config
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.pdb
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\Antlr3.Runtime.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\AutoMapper.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.DataLogic.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.SqlServer.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\Newtonsoft.Json.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\RestSharp.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Helpers.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Mvc.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Optimization.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Razor.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Razor.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\WebGrease.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.DataLogic.pdb
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.Entities.pdb
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\AutoMapper.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\EntityFramework.SqlServer.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\RestSharp.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Helpers.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Mvc.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Optimization.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.Razor.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\System.Web.WebPages.Razor.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\Newtonsoft.Json.xml
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\bin\Antlr3.Runtime.pdb
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.csprojResolveAssemblyReference.cache
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.dll
+C:\Users\Moriya Shrine\Desktop\AyDdS\DoctorFlow\DoctorFlow\DoctorFlow\obj\Debug\DoctorFlow.pdb
 C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\AutoMapper.Net4.dll
 C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll.config
 C:\Users\carlo_000\Documents\GitHub\DoctorFlow\DoctorFlow\DoctorFlow\bin\DoctorFlow.dll

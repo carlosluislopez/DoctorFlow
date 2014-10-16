@@ -4,40 +4,57 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+    function looksLikeMail(str) {
+        var lastAtPos = str.lastIndexOf('@@');
+        var lastDotPos = str.lastIndexOf('.');
+        return (lastAtPos < lastDotPos && lastAtPos > 0 && str.indexOf('@@@@') == -1 && lastDotPos > 2 && (str.length - lastDotPos) > 2);
+    }
 
+    function validateForm() {
+        var username = document.forms["login_form"]["EmailOrUserName"].value;
+        var password = document.forms["login_form"]["Password"].value;
+        if (username == null || username == "") {
+            alert("El Nombre de Usuario o Correo Electrónico es requerido.");
+            return false;
+        }
+        else if (password == null || password == "") {
+            alert("La Contraseña es requerida.");
+            return false;
+        }
+        else if (password.length < 8) {
+            alert("La Constraseña es muy corta.");
+            return false;
+        }
+        return true;
+    }
+</script>
 <h2></h2>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+<form action="/Login/Create" method="post" name ="login_form" onsubmit="return validateForm()" >
     <div>
         <div class="panel panel-info">
             <div class="form-horizontal">
                 <div class="register-item">
                     <h4 style="font-family: arial">Bienvenido a Doctor Flow</h4>
                 </div>
-                    <hr />
-                    @Html.ValidationSummary(true)
-
-                    <div class="form-group">
-                        <div class="register-item">
-                            @Html.LabelFor(model => model.EmailOrUserName)
-                        </div>
-                        <div class="register-item">
-                            @Html.EditorFor(model => model.EmailOrUserName)<br/>
-                            @Html.ValidationMessageFor(model => model.EmailOrUserName)
-                        </div>
+                <hr />
+                <div class="form-group">
+                    <div class="register-item">
+                        <label for="EmailOrUserName"> Correo/Usuario</label>
                     </div>
-
-                    <div class="form-group">
-                        <div class="register-item">
-                            @Html.LabelFor(model => model.Password)
-                        </div>
-                        <div class="register-item">
-                            @Html.EditorFor(model => model.Password)<br/>
-                            @Html.ValidationMessageFor(model => model.Password)
-                        </div>
+                    <div class="register-item">
+                        <input class="text-box single-line"  id="EmailOrUserName" name="EmailOrUserName" type="text" value="" /><br />
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="register-item">
+                        <label for="Password">Contrase&#241;a</label>
+                    </div>
+                    <div class="register-item">
+                        <input class="text-box single-line password" id="Password" name="Password" type="password" value="" /><br />
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <div class="register-item">
@@ -45,10 +62,9 @@
                     </div>
                 </div>
                 <div class="register-item">
-                    <a href="@Url.Action("Index","PasswordRecovery")">Olvidaste tu contraseña?</a>
-                    </div>
+                    <a href="/PasswordRecovery">Olvidaste tu contraseña?</a>
                 </div>
+            </div>
         </div>
     </div>
-
-}
+</form>

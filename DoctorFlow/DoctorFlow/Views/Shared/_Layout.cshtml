@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Doctor Flow</title>
-    <style type="text/css">.img-center {display: block; margin-left: auto ; margin-right: auto }</style>
+    <style type="text/css">.img-center {display: block; margin-left: auto ; margin-right: auto }
+
+ 
+    </style>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script type="text/javascript">
@@ -28,23 +31,43 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink((Session["USERNAME"].ToString().IsEmpty()) ? "Ingresar" : Session["USERNAME"].ToString()
-                                             ,(Session["USERNAME"].ToString().IsEmpty()) ? "Create" : "Details"
-                                             , (Session["USERNAME"].ToString().IsEmpty()) ? "Login" : "Profile"
-                                            )
+                        <li>
+                            @Html.ActionLink("Inicio","Index","Home")
                         </li>
                         <li>
-                            @Html.ActionLink((Session["USERNAME"].ToString().IsEmpty()) ? "Registrarse" : "Cerrar Sesion"
-                                              , (Session["USERNAME"].ToString().IsEmpty()) ? "Create" : "Logout"
-                                              , (Session["USERNAME"].ToString().IsEmpty()) ? "Register" : "Login"
-                                            )
+                            @(((Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty())) ? Html.ActionLink("Ingresar", "Create", "Login") : Html.ActionLink(Session["USERNAME"].ToString(), "Details", "Profile"))
                         </li>
+                        <li>
+                            @(((Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty()))?Html.ActionLink("Registrar como Usuario", "Create", "Register"):Html.ActionLink("Salir", "Logout", "Login"))
+                        </li>
+                            @if (Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty())
+                            {<li>
+                                    @Html.ActionLink("Registrar como Medico", "Index", "RegisterDoctor");
+                             </li>
+                            }
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="container body-content">
+            @if (ViewBag.Errors != null)
+            {
+                foreach (string error in ViewBag.Errors)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @Html.Raw(error)
+                        <br />
+                    </div>
+                }
+            }
+            @if (ViewBag.SuccessAlert != null)
+            {
+              <div class="alert alert-success" role="alert">
+                        @Html.Raw(ViewBag.SuccessAlert)
+                        <br />
+                    </div>
+            }
             @RenderBody()
         </div>
 

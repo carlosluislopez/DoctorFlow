@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Windows.Forms;
 using AutoMapper;
 using DoctorFlow.Entities.Models;
 using DoctorFlow.Models;
 using DoctorFlow.DataLogic;
+using DoctorFlow.Models.UserModels;
 using RestSharp;
 using System.Web.Security;
 
@@ -25,10 +22,7 @@ namespace DoctorFlow.Controllers.UserControllers
         {
             _userRepositry = userRepositry;
         }
-        public ActionResult Index()
-        {
-            return View();
-        }
+
         public ActionResult Create()
         {
             return View();
@@ -39,6 +33,28 @@ namespace DoctorFlow.Controllers.UserControllers
         {
             if (ModelState.IsValid)
             {
+                var user = _userRepositry.getUser(registerModel.Email);
+                if (user != null)
+                {
+                    registerModel.Email = "";
+                    ViewBag.Errors = new[]
+                    {
+                        "•El correo que ingreso ya existe, intente de nuevo."
+                    };
+                    return View(registerModel);
+                }
+
+                user = _userRepositry.getUser(registerModel.UserName);
+                if (user != null)
+                {
+                    registerModel.UserName = "";
+                    ViewBag.Errors = new[]
+                    {
+                        "•El nombre de usuario que ingreso ya existe, intente de nuevo."
+                    };
+                    return View(registerModel);
+                }
+
                 Mapper.CreateMap<User, UserRegisterModel>().ReverseMap();
                 var newUser = Mapper.Map<UserRegisterModel, User>(registerModel);                
                 newUser.RegisterDate = DateTime.Now;
@@ -58,7 +74,7 @@ namespace DoctorFlow.Controllers.UserControllers
                     string message = string.Format(@"Visite el siguiente enlace: {0}?ActivateCode={1} para activar su cuenta.", link, generatePassword);
                     SendSimpleMessage(newUser.Email, message);
                 }
-
+                TempData["RegisterSuccess"] = "Se ha creado tu cuenta satisfactoriamente, revisa tu correo para poder activarla!";
                 return RedirectToAction("Create", "Login");
             }
             return View(registerModel);
@@ -106,8 +122,16 @@ namespace DoctorFlow.Controllers.UserControllers
             {
                 var userAccount = new UserRepository();
                 if(userAccount.ActivateUser(userModel.EmailOrUserName, userModel.Password, userModel.ActivateCode))
+                {
+                    TempData["SuccessAlert"] =
+                        " Se ha activado tu cuenta satisfactoriamente. Ya puedes hacer uso de Doctor Flow. ¡Felicidades!";
                     return RedirectToAction("Index", "Home");
+                }
             }
+            ViewBag.Errors = new[]
+                    {
+                        "•Esta combinacion de Nombre/Correo, Contraseña y/o Codigo de activacion no coinciden con nuestros datos, verifiquelos e intente de nuevo."
+                    };
             return View(userModel);
         }
 
@@ -120,9 +144,8 @@ namespace DoctorFlow.Controllers.UserControllers
 
             disableUser.Status = false;
 
-
             const int passwordLength = 8;
-            const int numberOfNonAlphanumericCharacters = 2;
+            const int numberOfNonAlphanumericCharacters = 0;
             var generatePassword = Membership.GeneratePassword(passwordLength, numberOfNonAlphanumericCharacters);
 
             disableUser.ActivateCode = generatePassword;
@@ -135,12 +158,9 @@ namespace DoctorFlow.Controllers.UserControllers
                 message += Environment.NewLine;
                 message += "(Copie el enlace y peguelo en la barra de direcciones de su navegador web).";
                 SendSimpleMessage(disableUser.Email, message);
-
                 Session["USERNAME"] = string.Empty;
                 Session.Add("USERID", -1);
-
             }
-
             return RedirectToAction("Index", "Home");
         }
     }
