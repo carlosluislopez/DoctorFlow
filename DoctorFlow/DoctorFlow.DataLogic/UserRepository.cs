@@ -237,6 +237,72 @@ namespace DoctorFlow.DataLogic
             return null;
         }
 
+        public Doctor getDoctor(int idUser)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                try
+                {
+                    var doctors = from doctor in db.Doctor
+                                  where doctor.MyUserData.Id == idUser
+                                  select doctor;
+
+                    if (doctors.Any())
+                        return doctors.First();
+                }
+                catch (Exception ex) { }
+            }
+            return null;
+        }
+
+        public bool isDoctor(int userId)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                try
+                {
+                    var doctors = from doctor in db.Doctor
+                                  where doctor.MyUserData.Id == userId
+                                select doctor;
+
+                    if (doctors.Any())
+                        return true;
+                }
+                catch (Exception ex) { }
+            }
+            return false;
+        }
+
+        public bool EditDoctor(Doctor EditDoctor)
+        {
+            using (var db = new DoctorFlowContext())
+            {
+                var userQueryable = (from d in db.Doctor
+                                     where d.MyUserData.Id == EditDoctor.MyUserData.Id
+                                     select d
+                                    );
+
+                if (!userQueryable.Any())
+                    return false;
+
+                var doctor = userQueryable.First();
+
+                doctor.Specialty = EditDoctor.Specialty;
+                doctor.WorkPlace = EditDoctor.WorkPlace;
+                doctor.WorkAddress = EditDoctor.WorkAddress;
+                doctor.ScheduleStart = EditDoctor.ScheduleStart;
+                doctor.ScheduleEnd = EditDoctor.ScheduleEnd;
+                doctor.MedicalLicenseNumber = EditDoctor.MedicalLicenseNumber;
+                try
+                {
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex) { }
+            }
+            return false;
+        }
+
         public bool ActivateUser(string userNameEmail, string password, string activateCode)
         {
             using (var db = new DoctorFlowContext())

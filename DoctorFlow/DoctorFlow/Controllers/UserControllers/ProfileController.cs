@@ -58,23 +58,16 @@ namespace DoctorFlow.Controllers.UserControllers
 
             if (registerModel.UpladPhoto != null && registerModel.UpladPhoto.ContentLength > 0)
             {
-                //ModelState.AddModelError("UpladPhoto", "This field is required");
                 if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
                 {
                     ModelState.AddModelError("UpladPhoto", "Por favr seleccione entre una imagen GIF, JPG o PNG");
                 }
             }
-            //else if (!validImageTypes.Contains(registerModel.UpladPhoto.ContentType))
-            //{
-            //    ModelState.AddModelError("UpladPhoto", "Please choose either a GIF, JPG or PNG image.");
-            //}
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    //byte[] fileBytes = new byte[registerModel.UpladPhoto.ContentLength];
-
                     byte[] fileBytes = null;
                     if (registerModel.UpladPhoto != null)
                     {
@@ -106,29 +99,5 @@ namespace DoctorFlow.Controllers.UserControllers
             }
             return View(registerModel);
         }
-
-        //
-        // GET: /Profile/Delete/5
-        //public ActionResult Delete(int id)
-        //{
-        //    return View();
-        //}
-
-        ////
-        //// POST: /Profile/Delete/5
-        //[HttpPost]
-        //public ActionResult Delete(int id)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add delete logic here
-
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
     }
 }
