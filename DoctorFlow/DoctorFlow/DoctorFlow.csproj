@@ -136,11 +136,14 @@
     <Compile Include="Controllers\UserControllers\PasswordRecoveryController.cs" />
     <Compile Include="Controllers\UserControllers\LoginController.cs" />
     <Compile Include="Controllers\UserControllers\ProfileController.cs" />
+    <Compile Include="Controllers\UserControllers\ProfileDoctorController.cs" />
     <Compile Include="Controllers\UserControllers\RegisterController.cs" />
     <Compile Include="Controllers\UserControllers\RegisterDoctorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserModels\DoctorProfileModel.cs" />
+    <Compile Include="Models\UserModels\DoctorEditProfileModel.cs" />
     <Compile Include="Models\UserModels\DoctorRegisterModel.cs" />
     <Compile Include="Models\UserModels\UserActivateModel.cs" />
     <Compile Include="Models\UserModels\UserEditProfileModel.cs" />
@@ -195,6 +198,8 @@
     <Content Include="Views\Profile\Edit.cshtml" />
     <Content Include="Views\Register\Activate.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\ProfileDoctor\Details.cshtml" />
+    <Content Include="Views\ProfileDoctor\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DoctorFlow.DataLogic\DoctorFlow.DataLogic.csproj">

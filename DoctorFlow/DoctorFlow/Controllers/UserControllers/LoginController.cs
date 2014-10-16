@@ -41,6 +41,10 @@ namespace DoctorFlow.Controllers.UserControllers
                 }
                 Session.Add("USERNAME", user.Name);
                 Session.Add("USERID", user.Id);
+                
+                if(userAccount.isDoctor(user.Id))
+                    Session.Add("ISDOCTOR", "1");
+                
                 return RedirectToAction("Details", "Profile");
             }
             return View(loginModel);
@@ -49,6 +53,7 @@ namespace DoctorFlow.Controllers.UserControllers
         {
             Session["USERNAME"] = string.Empty;
             Session.Add("USERID", -1);
+            Session.Add("ISDOCTOR", 0);
             return RedirectToAction("Index", "Home"); 
         }
     }

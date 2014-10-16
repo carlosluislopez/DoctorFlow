@@ -17,5 +17,10 @@ namespace DoctorFlow.DataLogic
         bool ActivateUser(string userNameEmail, string password, string activateCode);
         User getUser(int idUser);
         User getUser(string userNameEmail);
+
+        Doctor getDoctor(int idUser);
+        bool isDoctor(int userId);
+
+        bool EditDoctor(Doctor EditDoctor);
     }
 }

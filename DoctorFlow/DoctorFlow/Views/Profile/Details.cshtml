@@ -151,6 +151,13 @@
 
                             <p style="font-size: 125%" align="right">
                                 @Html.ActionLink("Editar", "Edit", "Profile") |
+                                
+                                @if (Session["ISDOCTOR"] != null && Session["ISDOCTOR"].ToString() == "1")
+                                {
+                                    @Html.ActionLink("Ver Información Profesional", "Details", "ProfileDoctor");
+                                }
+                                |
+                                
                                 @Html.ActionLink("Deshabilitar", "Disable", "Register") |
                                 
                             </p>
