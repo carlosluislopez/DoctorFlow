@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 20px;
 }
 
@@ -39,4 +39,14 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
+}
+
+.page-error {
+    color: red;
+    font-family: helvetica;
+}
+.img-details {
+        max-width: 200px;
+        max-height: 300px;
+    height: auto;
 }

@@ -55,7 +55,44 @@
     <Compile Include="Migrations\201408271753101_RemoveIDRol.Designer.cs">
       <DependentUpon>201408271753101_RemoveIDRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201409091037580_Test.cs" />
+    <Compile Include="Migrations\201409091037580_Test.Designer.cs">
+      <DependentUpon>201409091037580_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409100700589_FlaDatetime.cs" />
+    <Compile Include="Migrations\201409100700589_FlaDatetime.Designer.cs">
+      <DependentUpon>201409100700589_FlaDatetime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409111027381_AddUserFields.cs" />
+    <Compile Include="Migrations\201409111027381_AddUserFields.Designer.cs">
+      <DependentUpon>201409111027381_AddUserFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409111824201_AddUserPhotoField.cs" />
+    <Compile Include="Migrations\201409111824201_AddUserPhotoField.Designer.cs">
+      <DependentUpon>201409111824201_AddUserPhotoField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409140817347_Doctor.cs" />
+    <Compile Include="Migrations\201409140817347_Doctor.Designer.cs">
+      <DependentUpon>201409140817347_Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409140821260_Doctor2.cs" />
+    <Compile Include="Migrations\201409140821260_Doctor2.Designer.cs">
+      <DependentUpon>201409140821260_Doctor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409140830281_Doctor21.cs" />
+    <Compile Include="Migrations\201409140830281_Doctor21.Designer.cs">
+      <DependentUpon>201409140830281_Doctor21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409140918519_Doctor3.cs" />
+    <Compile Include="Migrations\201409140918519_Doctor3.Designer.cs">
+      <DependentUpon>201409140918519_Doctor3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409180658051_AddActivateCode.cs" />
+    <Compile Include="Migrations\201409180658051_AddActivateCode.Designer.cs">
+      <DependentUpon>201409180658051_AddActivateCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +107,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408271753101_RemoveIDRol.resx">
       <DependentUpon>201408271753101_RemoveIDRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409091037580_Test.resx">
+      <DependentUpon>201409091037580_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409100700589_FlaDatetime.resx">
+      <DependentUpon>201409100700589_FlaDatetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409111027381_AddUserFields.resx">
+      <DependentUpon>201409111027381_AddUserFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409111824201_AddUserPhotoField.resx">
+      <DependentUpon>201409111824201_AddUserPhotoField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140817347_Doctor.resx">
+      <DependentUpon>201409140817347_Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140821260_Doctor2.resx">
+      <DependentUpon>201409140821260_Doctor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140830281_Doctor21.resx">
+      <DependentUpon>201409140830281_Doctor21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409140918519_Doctor3.resx">
+      <DependentUpon>201409140918519_Doctor3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409180658051_AddActivateCode.resx">
+      <DependentUpon>201409180658051_AddActivateCode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

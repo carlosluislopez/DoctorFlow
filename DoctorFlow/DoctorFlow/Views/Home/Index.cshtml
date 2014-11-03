@@ -1,31 +1,29 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<body>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <img class="img-center" src="~/Content/Image/lema.png" alt="Dr.Flow.png" />
+    <div class="row" style="text-align:justify" >
+        <div class="col-md-5">
+            <h2>Dr. Flow : Paciente</h2>
+            <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque pretium mauris a orci dapibus vestibulum. Suspendisse vestibulum pulvinar neque vitae gravida. Morbi eu metus dui. Etiam eleifend rutrum ligula ac porta. Aenean dapibus, ex sed molestie elementum, mauris libero fringilla diam, nec convallis justo velit nec est. Vestibulum ultricies neque ac justo ultricies, ac rhoncus ante tincidunt. Vivamus dapibus arcu ut odio congue, quis tempor nisi sodales. Vivamus feugiat placerat leo non mattis. Maecenas aliquam augue vitae luctus euismod.
+            </p>
+            <a href="@Url.Action("Create", "Register")">
+                <input type="submit" value="Registrarme" class="btn btn-primary" />
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h2>Dr. Flow: Medico</h2>
+            <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque pretium mauris a orci dapibus vestibulum. Suspendisse vestibulum pulvinar neque vitae gravida. Morbi eu metus dui. Etiam eleifend rutrum ligula ac porta. Aenean dapibus, ex sed molestie elementum, mauris libero fringilla diam, nec convallis justo velit nec est. Vestibulum ultricies neque ac justo ultricies, ac rhoncus ante tincidunt. Vivamus dapibus arcu ut odio congue, quis tempor nisi sodales. Vivamus feugiat placerat leo non mattis. Maecenas aliquam augue vitae luctus euismod.
+            </p>
+            <p>
+                <a href="@Url.Action("Index", "RegisterDoctor")">
+                    <input type="submit" value="Registrarme" class="btn btn-primary" />
+                </a>
+            </p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</body>

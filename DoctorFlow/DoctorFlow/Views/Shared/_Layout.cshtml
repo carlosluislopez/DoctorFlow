@@ -3,40 +3,84 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Doctor Flow</title>
+    <style type="text/css">.img-center {display: block; margin-left: auto ; margin-right: auto }
+
+ 
+    </style>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript">
+        $(function () { // will trigger when the document is ready
+            $('.datepicker').datepicker(); //Initialise any date pickers
+        });
+    </script>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+    <body>
+        <a href="@Url.Action("Index","Home")"><img class="img-center" src="~/Content/Image/titlesplash.png" alt="Dr.Flow.png" /> </a>
+        <div class="navbar navbar-inverse navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            @Html.ActionLink("Inicio","Index","Home")
+                        </li>
+                        <li>
+                            @(((Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty())) ? Html.ActionLink("Ingresar", "Create", "Login") : Html.ActionLink(Session["USERNAME"].ToString(), "Details", "Profile"))
+                        </li>
+                        <li>
+                            @(((Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty()))?Html.ActionLink("Registrar como Usuario", "Create", "Register"):Html.ActionLink("Salir", "Logout", "Login"))
+                        </li>
+                            @if (Session["USERNAME"] == null || Session["USERNAME"].ToString().IsEmpty())
+                            {<li>
+                                    @Html.ActionLink("Registrar como Medico", "Index", "RegisterDoctor");
+                             </li>
+                            }
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-</body>
+        <div class="container body-content">
+            @if (ViewBag.Errors != null)
+            {
+                foreach (string error in ViewBag.Errors)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @Html.Raw(error)
+                        <br />
+                    </div>
+                }
+            }
+            @if (ViewBag.SuccessAlert != null)
+            {
+              <div class="alert alert-success" role="alert">
+                        @Html.Raw(ViewBag.SuccessAlert)
+                        <br />
+                    </div>
+            }
+            @RenderBody()
+        </div>
+
+        <div class="container body-content">
+            <br />
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Doctoru Furou</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
 </html>

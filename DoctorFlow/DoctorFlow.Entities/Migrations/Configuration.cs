@@ -9,7 +9,7 @@ namespace DoctorFlow.Entities.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "DoctorFlow.Entities.Context.DoctorFlowContext";
         }
 
