@@ -76,98 +76,152 @@
 </script>
 
 
-<form action="/RegisterDoctor" method="post" name="register_form" onsubmit="return validateForm()">
-    <div class="col-md-5 pull-right col-md-offset-3 ">
-    </div>
-    <div>
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h1 class="panel-title">Registrarse como Medico</h1>
+    <form action="/RegisterDoctor" method="post" name="register_form" onsubmit="return validateForm()">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5    pull-right col-md-offset-3 ">
+
+                <br>
+
             </div>
-            <div class="panel-body">
-                <div>
-                    <div class="form-horizontal">
-                        <hr />
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="UserName">Nombre de Usuario</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" id="UserName" name="UserName" type="text" value="" /><br />
-                            </div>
-                        </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" align="left">
 
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="Name">Nombre</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" id="Name" name="Name" type="text" value="" /><br />
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="LastName">Apellido</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" id="LastName" name="LastName" type="text" value="" /><br />
-                            </div>
-                        </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading" style="background-color: #81BEF7">
+                        <h3 class="panel-title">
 
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="Password">Contrase&#241;a</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line password" id="Password" name="Password" type="password" value="" /><br />
 
-                            </div>
-                        </div>
+                            <b style="color: azure">
+                                Registrarse como Medico
+                            </b>
 
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="ConfirmPassword">Confirmar la Contrase&#241;a</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line password" id="ConfirmPassword" name="ConfirmPassword" type="password" value="" /><br />
-                            </div>
-                        </div>
+                        </h3>
 
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="Email">Correo electr&#243;nico</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" id="Email" name="Email" type="text" value="" /><br />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="Specialty">Especialidad</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" data-val="true" data-val-required="Este campo es requerido!" id="Specialty" name="Specialty" type="text" value="" /><br />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="MedicalLicenseNumber">N&#250;mero de colegiatura</label>
-                            </div>
-                            <div class="register-item">
-                                <input data-val="true" data-val-number="The field Número de colegiatura must be a number." data-val-required="Este campo es requerido!" id="MedicalLicenseNumber" name="MedicalLicenseNumber" type="text" value="" /><br />
-                            </div>
-                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <div class="register-item">
-                            <input type="submit" value="Registrarse" class="btn btn-primary" />
+                    <div class="row">
+                        <div class="col-md-1 col-lg-1 " align="center">
+                            <div id="Photo">
+                                <img class="img-circle" width="70" height="70" />
+                            </div>
                         </div>
+                        <div class="panel-body">
+
+                            <div class="row">
+
+
+                                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                                    <dl>
+                                        <dt>DEPARTMENT:</dt>
+                                        <dd>Administrator</dd>
+                                        <dt>HIRE DATE</dt>
+                                        <dd>11/12/2013</dd>
+                                        <dt>DATE OF BIRTH</dt>
+                                        <dd>11/12/2013</dd>
+                                        <dt>GENDER</dt>
+                                        <dd>Male</dd>
+                                    </dl>
+                                </div>-->
+
+                                <div class=" col-md-9 col-lg-9">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="UserName">Nombre de Usuario</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" id="UserName" name="UserName" type="text" value="" /><br />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="Name">Nombre</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" id="Name" name="Name" type="text" value="" /><br />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="LastName">Apellido</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" id="LastName" name="LastName" type="text" value="" /><br />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="Password">Contrase&#241;a</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line password" id="Password" name="Password" type="password" value="" /><br />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="ConfirmPassword">Confirmar la Contrase&#241;a</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line password" id="ConfirmPassword" name="ConfirmPassword" type="password" value="" /><br />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="Email">Correo electr&#243;nico</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" id="Email" name="Email" type="text" value="" /><br />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="Specialty">Especialidad</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" data-val="true" data-val-required="Este campo es requerido!" id="Specialty" name="Specialty" type="text" value="" /><br />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="MedicalLicenseNumber">N&#250;mero de colegiatura</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input data-val="true" data-val-number="The field Número de colegiatura must be a number." data-val-required="Este campo es requerido!" id="MedicalLicenseNumber" name="MedicalLicenseNumber" type="text" value="" /><br />
+                                                </div>
+                                            </div>
+                                        </tbody>
+                                    </table>
+
+                                    <p style="font-size: 125%" align="right">
+
+                                        <div class="form-group">
+                                            <div class="register-item">
+                                                <input type="submit" value="Registrarse" class="btn btn-primary" />
+                                            </div>
+                                        </div>
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+
+                        </div>
+
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+
 </form>

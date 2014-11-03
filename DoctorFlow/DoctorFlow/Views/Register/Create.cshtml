@@ -57,92 +57,145 @@
     }
 </script>
 
-   <form action="/Register/Create" method="post" onsubmit="return validateForm()" name="register_form">
-    <div class="col-md-5   pull-right col-md-offset-3 ">
-    </div>
-    <div>
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">Registrarse como Usuario</h3>
-            </div>
-            <div class="panel-body">
-                <div>
-                    <div class="form-horizontal">
-                        <hr />
 
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="UserName">Nombre de Usuario</label>
-                            </div>
-                            <div class="register-item">
+<form action="/Register/Create" method="post" onsubmit="return validateForm()" name="register_form" >
 
-                                <input class="text-box single-line" data-val="true" data-val-length="No debe estar vacio." data-val-length-max="100" data-val-length-min="1" data-val-required="The Nombre de Usuario field is required." id="UserName" name="UserName" type="text" value="" /><br />
-                                <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
+    
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-5    pull-right col-md-offset-3 ">
 
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="Name">Nombre</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" data-val="true" data-val-required="The Nombre field is required." id="Name" name="Name" type="text" value="" /><br />
-                                <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="LastName">Apellido</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" data-val="true" data-val-required="The Apellido field is required." id="LastName" name="LastName" type="text" value="" /><br />
-                                <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="Password">Contrase&#241;a</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line password" data-val="true" data-val-length="La contraseña deberia tener al menos 8 caracteres." data-val-length-max="100" data-val-length-min="8" data-val-required="The Contraseña field is required." id="Password" name="Password" type="password" value="" /><br />
-                                <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
-
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="ConfirmPassword">Confirmar la Contrase&#241;a</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line password" data-val="true" data-val-equalto="&#39;Confirmar la Contraseña&#39; and &#39;Contraseña&#39; do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password" value="" /><br />
-                                <span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="register-item">
-                                <label for="Email">Correo electr&#243;nico</label>
-                            </div>
-                            <div class="register-item">
-                                <input class="text-box single-line" id="Email" name="Email" type="text" value="" /><br />
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="register-item">
-                            <input type="submit" value="Registrarse" class="btn btn-primary" />
-                        </div>
-                    </div>
-                </div>
+                <br>
 
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" align="left">
+
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" style="background-color: #81BEF7">
+                        <h3 class="panel-title">
+
+
+                            <b style="color: azure">
+                                Registrarse como Usuario
+                            </b>
+
+                        </h3>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 col-lg-1 " align="center" >
+                            <div id="Photo" >
+                                <img class="img-circle" width="70" height="70" />
+                            </div>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="row">
+
+
+                                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                        <dl>
+                            <dt>DEPARTMENT:</dt>
+                            <dd>Administrator</dd>
+                            <dt>HIRE DATE</dt>
+                            <dd>11/12/2013</dd>
+                            <dt>DATE OF BIRTH</dt>
+                            <dd>11/12/2013</dd>
+                            <dt>GENDER</dt>
+                            <dd>Male</dd>
+                        </dl>
+                    </div>-->
+
+                                <div class=" col-md-9 col-lg-9">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="UserName">Nombre de Usuario</label>
+                                                </div>
+                                                <div class="register-item">
+
+                                                    <input class="text-box single-line" data-val="true" data-val-length="No debe estar vacio." data-val-length-max="100" data-val-length-min="1" data-val-required="The Nombre de Usuario field is required." id="UserName" name="UserName" type="text" value="" /><br />
+                                                    <span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="Name">Nombre</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" data-val="true" data-val-required="The Nombre field is required." id="Name" name="Name" type="text" value="" /><br />
+                                                    <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="LastName">Apellido</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" data-val="true" data-val-required="The Apellido field is required." id="LastName" name="LastName" type="text" value="" /><br />
+                                                    <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="Password">Contrase&#241;a</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line password" data-val="true" data-val-length="La contraseña deberia tener al menos 8 caracteres." data-val-length-max="100" data-val-length-min="8" data-val-required="The Contraseña field is required." id="Password" name="Password" type="password" value="" /><br />
+                                                    <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="ConfirmPassword">Confirmar la Contrase&#241;a</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line password" data-val="true" data-val-equalto="&#39;Confirmar la Contraseña&#39; and &#39;Contraseña&#39; do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password" value="" /><br />
+                                                    <span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="register-item">
+                                                    <label for="Email">Correo electr&#243;nico</label>
+                                                </div>
+                                                <div class="register-item">
+                                                    <input class="text-box single-line" id="Email" name="Email" type="text" value="" /><br />
+
+                                                </div>
+                                            </div>
+
+                                        </tbody>
+                                    </table>
+
+                                    <p style="font-size: 125%" align="right">
+
+                                        <div class="form-group">
+                                            <div class="register-item">
+                                                <input type="submit" value="Registrarse" class="btn btn-primary" />
+                                            </div>
+                                        </div>
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+
+                        </div>
+
+                    </div>
+                        </div>
+                    </div>
         </div>
-    </div>
-</form>    
-   
+        </div>
+</form>  
 

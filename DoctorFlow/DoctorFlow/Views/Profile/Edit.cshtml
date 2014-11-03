@@ -13,137 +13,218 @@ $( "#datepicker" ).datepicker();
     ViewBag.Title = "Edit User";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
->Editar</h2>
 
-@using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new {enctype = "multipart/form-data"}))
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h4>Perfil del Usuario</h4>
-        <hr />
-        @Html.ValidationSummary(true)
-        @{
-            var imgSrc = "";
-            if (Model.Photo != null)
-            {
-                var base64 = Convert.ToBase64String(Model.Photo);
-                imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
-            }
-        }
-        <img height="100" src="@imgSrc" />
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UserName)<br/>
-                @Html.ValidationMessageFor(model => model.UserName)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name)<br/>
-                @Html.ValidationMessageFor(model => model.Name)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LastName)<br/>
-                @Html.ValidationMessageFor(model => model.LastName)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email)<br/>
-                @Html.ValidationMessageFor(model => model.Email)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.BirthDate, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor((model) => model.BirthDate, new { @class = "form-control", placeholder = "Enter Drop-off date here...",id = "datepicker" })<br/>
-                @Html.ValidationMessageFor(model => model.BirthDate)
-            </div>
-        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5    pull-right col-md-offset-3 ">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SocialSecurityNumber, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SocialSecurityNumber)<br/>
-                @Html.ValidationMessageFor(model => model.SocialSecurityNumber)
-            </div>
-        </div>
+                <br>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Phone)<br/>
-                @Html.ValidationMessageFor(model => model.Phone)
             </div>
-        </div>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7  col-md-offset-3 col-lg-offset-3 ">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.MaritalStatus, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MaritalStatus)
-                @Html.ValidationMessageFor(model => model.MaritalStatus)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Height, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Height)<br/>
-                @Html.ValidationMessageFor(model => model.Height)
-            </div>
-        </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading" style="background-color: #81BEF7">
+                        <h3 class="panel-title">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.BloodType, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BloodType)<br/>
-                @Html.ValidationMessageFor(model => model.BloodType)
-            </div>
-        </div>
+                            <b style="color: azure">
+                            Editar Perfil
+                                </b>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Allergy, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Allergy)
-                @Html.ValidationMessageFor(model => model.Allergy)
-            </div>
-        </div>
+</h3>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Address)<br/>
-                @Html.ValidationMessageFor(model => model.Address)
-            </div>
-        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="panel-body">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.UpladPhoto, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(m => m.UpladPhoto, new { type = "file" })<br />
-                @Html.ValidationMessageFor(model => model.UpladPhoto)
-            </div>
-        </div>
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 " align="center">
+                                    <div id="Photo">
+                                        @{
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="Submit" value="Save" class="btn btn-default" />
+                                        }
+
+
+                                        @Html.ValidationSummary(true)
+                                        @{
+    var imgSrc = "";
+    if (Model.Photo != null)
+    {
+        var base64 = Convert.ToBase64String(Model.Photo);
+        imgSrc = String.Format("data:image/jpeg;base64,{0}", base64);
+    }
+                                        }
+                                        <img height="100" src="@imgSrc" />
+
+                                    </div>
+                                </div>
+
+
+                                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                <dl>
+                    <dt>DEPARTMENT:</dt>
+                    <dd>Administrator</dd>
+                    <dt>HIRE DATE</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>DATE OF BIRTH</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>GENDER</dt>
+                    <dd>Male</dd>
+                </dl>
+            </div>-->
+
+                                <div class=" col-xs-12 col-xs-12">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                        
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.UserName)<br />
+                                                    @Html.ValidationMessageFor(model => model.UserName)
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.Name)<br />
+                                                    @Html.ValidationMessageFor(model => model.Name)
+                                                </div>
+                                            </div>
+                                           
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.LastName)<br />
+                                                    @Html.ValidationMessageFor(model => model.LastName)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.Email)<br />
+                                                    @Html.ValidationMessageFor(model => model.Email)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.BirthDate, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor((model) => model.BirthDate, new { @class = "form-control", placeholder = "Enter Drop-off date here...", id = "datepicker" })<br />
+                                                    @Html.ValidationMessageFor(model => model.BirthDate)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.SocialSecurityNumber, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.SocialSecurityNumber)<br />
+                                                    @Html.ValidationMessageFor(model => model.SocialSecurityNumber)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" >
+                                                @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-4" })
+                                               
+                                                <div >
+                                                    @Html.EditorFor(model => model.Phone)<br />
+                                                    @Html.ValidationMessageFor(model => model.Phone)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.MaritalStatus, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.MaritalStatus)
+                                                    @Html.ValidationMessageFor(model => model.MaritalStatus)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Height, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.Height)<br />
+                                                    @Html.ValidationMessageFor(model => model.Height)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.BloodType, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.BloodType)<br />
+                                                    @Html.ValidationMessageFor(model => model.BloodType)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Allergy, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.Allergy)
+                                                    @Html.ValidationMessageFor(model => model.Allergy)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.EditorFor(model => model.Address)<br />
+                                                    @Html.ValidationMessageFor(model => model.Address)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.UpladPhoto, new { @class = "control-label col-md-4" })
+                                                <div >
+                                                    @Html.TextBoxFor(m => m.UpladPhoto, new { type = "file" })<br />
+                                                    @Html.ValidationMessageFor(model => model.UpladPhoto)
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <input type="Submit" value="Save" class="btn btn-default" />
+                                                </div>
+                                            </div>
+
+                                        </tbody>
+                                    </table>
+
+                                    <p style="font-size: 125%" align="right">
+                                        <div>
+                                            @Html.ActionLink("Regresar", "Details")
+                                        </div>
+
+
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel-footer">
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Details")
-</div>
+
+
