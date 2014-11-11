@@ -70,7 +70,7 @@ namespace DoctorFlow.Controllers.UserControllers
                 newUser.BirthDate = DateTime.Now;
 
                 const int passwordLength = 8;
-                const int numberOfNonAlphanumericCharacters = 2;
+                const int numberOfNonAlphanumericCharacters = 0;
                 var generatePassword = Membership.GeneratePassword(passwordLength, numberOfNonAlphanumericCharacters);
 
                 newUser.ActivateCode = generatePassword;

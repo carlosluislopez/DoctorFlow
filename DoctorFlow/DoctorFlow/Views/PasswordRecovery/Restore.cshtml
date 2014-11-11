@@ -4,18 +4,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h3 style="font-family: helvetica">Restaurar Contraseña</h3>
-<br/>
-<form action="/PasswordRecovery" method="post">
+<br />
+<form action="~/Views/PasswordRecovery/Restore" method="post">
     <div class="form-group">
         <label for="Email">Correo Electr&#243;nico</label>
-        <br/>
         <div>
-            <input id="Email" name="Email" type="text" value="" /><br />
+            <input data-val="true" data-val-email="The Correo Electrónico field is not a valid e-mail address." id="Email" name="Email" type="email" value="" /><br />
         </div>
-        <br />
+        <label for="PassKey">Clave</label>
         <div>
-            <input type="submit" value="Enviar" class="btn btn-default" />
+            <input id="PassKey" name="PassKey" type="text" value="" /><br />
         </div>
+        <label for="NewPassword">Nueva Contrase&#241;a</label>
+        <div>
+            <input id="NewPassword" name="NewPassword" type="password" value="" /><br />
+        </div>
+        <label for="ConfirmNewPassword">Confirmar Contrase&#241;a</label>
+        <div>
+            <input id="ConfirmNewPassword" name="ConfirmNewPassword" type="password" value="" /><br />
+        </div>
+    </div>
+    <div class="col-md-10">
+        <input type="submit" value="Restaurar" class="btn btn-success" />
     </div>
 </form>
