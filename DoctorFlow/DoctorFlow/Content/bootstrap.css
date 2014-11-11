@@ -5411,11 +5411,14 @@ a.list-group-item:focus {
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  background-color: #81BEF7
 }
 
 .panel-title {
     text-align: center;
     font-family: arial,sans-serif;
+    color: azure;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 16px;
@@ -5555,9 +5558,9 @@ a.list-group-item:focus {
 
 .panel-info > .panel-heading {
     font-family: arial;
-  color: #000000;
-  background-color: #ffffff;
-  border-color: #bce8f1;
+    color: #000000;
+    background-color: #81BEF7;
+    border-color: #bce8f1;
 }
 
 .panel-info > .panel-heading + .panel-collapse .panel-body {

@@ -6,28 +6,16 @@
 
 <h3 style="font-family: helvetica">Restaurar Contraseña</h3>
 <br/>
-@using (Html.BeginForm())
-{
+<form action="/PasswordRecovery" method="post">
     <div class="form-group">
-        @Html.LabelFor(model => model.Email)
+        <label for="Email">Correo Electr&#243;nico</label>
+        <br/>
         <div>
-            @Html.EditorFor(model => model.Email)<br/>
+            <input id="Email" name="Email" type="text" value="" /><br />
         </div>
-        @Html.LabelFor(model => model.PassKey)
+        <br />
         <div>
-            @Html.EditorFor(model => model.PassKey)<br/>
-        </div>
-        @Html.LabelFor(model => model.NewPassword)
-        <div>
-            @Html.EditorFor(model => model.NewPassword)<br/>
-        </div>
-        @Html.LabelFor(model => model.ConfirmNewPassword)
-        <div>
-            @Html.EditorFor(model => model.ConfirmNewPassword)<br/>
+            <input type="submit" value="Enviar" class="btn btn-default" />
         </div>
     </div>
-    <div class="col-md-10">
-        <input type="submit" value="Restaurar" class="btn btn-success" />
-    </div>
-    
-}
+</form>
